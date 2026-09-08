@@ -1,0 +1,964 @@
+{
+  "1": {
+    "weapon": {
+      "current_name": "\"Grim Shout\" Grave Wand of Skill +1",
+      "final_name": "\"Grim Shout\" Grave Wand of Skill +1",
+      "item_name": "Grave Wand",
+      "greatness": 20,
+      "suffix": "of Skill",
+      "name_prefix": "Grim",
+      "name_suffix": "Shout"
+    },
+    "chest": {
+      "current_name": "Hard Leather Armor",
+      "final_name": "\"Mind Shout\" Hard Leather Armor of Protection +1",
+      "item_name": "Hard Leather Armor",
+      "greatness": 8,
+      "suffix": "of Protection",
+      "name_prefix": "Mind",
+      "name_suffix": "Shout"
+    },
+    "head": {
+      "current_name": "Divine Hood",
+      "final_name": "\"Oblivion Grasp\" Divine Hood of Rage +1",
+      "item_name": "Divine Hood",
+      "greatness": 5,
+      "suffix": "of Rage",
+      "name_prefix": "Oblivion",
+      "name_suffix": "Grasp"
+    },
+    "waist": {
+      "current_name": "Hard Leather Belt",
+      "final_name": "\"Woe Bite\" Hard Leather Belt of Titans +1",
+      "item_name": "Hard Leather Belt",
+      "greatness": 11,
+      "suffix": "of Titans",
+      "name_prefix": "Woe",
+      "name_suffix": "Bite"
+    },
+    "foot": {
+      "current_name": "\"Death Root\" Ornate Greaves of Skill",
+      "final_name": "\"Death Root\" Ornate Greaves of Skill +1",
+      "item_name": "Ornate Greaves",
+      "greatness": 19,
+      "suffix": "of Skill",
+      "name_prefix": "Death",
+      "name_suffix": "Root"
+    },
+    "hand": {
+      "current_name": "Studded Leather Gloves",
+      "final_name": "\"Pain Whisper\" Studded Leather Gloves of Anger +1",
+      "item_name": "Studded Leather Gloves",
+      "greatness": 7,
+      "suffix": "of Anger",
+      "name_prefix": "Pain",
+      "name_suffix": "Whisper"
+    },
+    "neck": {
+      "current_name": "Necklace of Enlightenment",
+      "final_name": "\"Dire Instrument\" Necklace of Enlightenment +1",
+      "item_name": "Necklace",
+      "greatness": 15,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Dire",
+      "name_suffix": "Instrument"
+    },
+    "ring": {
+      "current_name": "Gold Ring",
+      "final_name": "\"Carrion Whisper\" Gold Ring of Perfection +1",
+      "item_name": "Gold Ring",
+      "greatness": 7,
+      "suffix": "of Perfection",
+      "name_prefix": "Carrion",
+      "name_suffix": "Whisper"
+    }
+  },
+  "10": {
+    "weapon": {
+      "current_name": "Maul",
+      "final_name": "\"Gloom Bite\" Maul of Fury +1",
+      "item_name": "Maul",
+      "greatness": 5,
+      "suffix": "of Fury",
+      "name_prefix": "Gloom",
+      "name_suffix": "Bite"
+    },
+    "chest": {
+      "current_name": "Robe",
+      "final_name": "\"Empyrean Song\" Robe of Giants +1",
+      "item_name": "Robe",
+      "greatness": 12,
+      "suffix": "of Giants",
+      "name_prefix": "Empyrean",
+      "name_suffix": "Song"
+    },
+    "head": {
+      "current_name": "Divine Hood",
+      "final_name": "\"Blight Moon\" Divine Hood of Brilliance +1",
+      "item_name": "Divine Hood",
+      "greatness": 11,
+      "suffix": "of Brilliance",
+      "name_prefix": "Blight",
+      "name_suffix": "Moon"
+    },
+    "waist": {
+      "current_name": "Studded Leather Belt",
+      "final_name": "\"Bramble Whisper\" Studded Leather Belt of Titans +1",
+      "item_name": "Studded Leather Belt",
+      "greatness": 10,
+      "suffix": "of Titans",
+      "name_prefix": "Bramble",
+      "name_suffix": "Whisper"
+    },
+    "foot": {
+      "current_name": "Holy Greaves",
+      "final_name": "\"Hate Shadow\" Holy Greaves of Rage +1",
+      "item_name": "Holy Greaves",
+      "greatness": 3,
+      "suffix": "of Rage",
+      "name_prefix": "Hate",
+      "name_suffix": "Shadow"
+    },
+    "hand": {
+      "current_name": "Wool Gloves",
+      "final_name": "\"Brood Instrument\" Wool Gloves of Enlightenment +1",
+      "item_name": "Wool Gloves",
+      "greatness": 3,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Brood",
+      "name_suffix": "Instrument"
+    },
+    "neck": {
+      "current_name": "\"Havoc Sun\" Amulet of Reflection",
+      "final_name": "\"Havoc Sun\" Amulet of Reflection +1",
+      "item_name": "Amulet",
+      "greatness": 19,
+      "suffix": "of Reflection",
+      "name_prefix": "Havoc",
+      "name_suffix": "Sun"
+    },
+    "ring": {
+      "current_name": "Platinum Ring",
+      "final_name": "\"Horror Instrument\" Platinum Ring of Anger +1",
+      "item_name": "Platinum Ring",
+      "greatness": 9,
+      "suffix": "of Anger",
+      "name_prefix": "Horror",
+      "name_suffix": "Instrument"
+    }
+  },
+  "100": {
+    "weapon": {
+      "current_name": "Ghost Wand of Fury",
+      "final_name": "\"Corpse Whisper\" Ghost Wand of Fury +1",
+      "item_name": "Ghost Wand",
+      "greatness": 16,
+      "suffix": "of Fury",
+      "name_prefix": "Corpse",
+      "name_suffix": "Whisper"
+    },
+    "chest": {
+      "current_name": "Ornate Chestplate",
+      "final_name": "\"Mind Bite\" Ornate Chestplate of Titans +1",
+      "item_name": "Ornate Chestplate",
+      "greatness": 11,
+      "suffix": "of Titans",
+      "name_prefix": "Mind",
+      "name_suffix": "Bite"
+    },
+    "head": {
+      "current_name": "\"Blight Shout\" Hood of Skill +1",
+      "final_name": "\"Blight Shout\" Hood of Skill +1",
+      "item_name": "Hood",
+      "greatness": 20,
+      "suffix": "of Skill",
+      "name_prefix": "Blight",
+      "name_suffix": "Shout"
+    },
+    "waist": {
+      "current_name": "Mesh Belt",
+      "final_name": "\"Beast Shadow\" Mesh Belt of Detection +1",
+      "item_name": "Mesh Belt",
+      "greatness": 12,
+      "suffix": "of Detection",
+      "name_prefix": "Beast",
+      "name_suffix": "Shadow"
+    },
+    "foot": {
+      "current_name": "Ornate Greaves of the Fox",
+      "final_name": "\"Behemoth Roar\" Ornate Greaves of the Fox +1",
+      "item_name": "Ornate Greaves",
+      "greatness": 16,
+      "suffix": "of the Fox",
+      "name_prefix": "Behemoth",
+      "name_suffix": "Roar"
+    },
+    "hand": {
+      "current_name": "Holy Gauntlets",
+      "final_name": "\"Glyph Growl\" Holy Gauntlets of Enlightenment +1",
+      "item_name": "Holy Gauntlets",
+      "greatness": 0,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Glyph",
+      "name_suffix": "Growl"
+    },
+    "neck": {
+      "current_name": "Necklace",
+      "final_name": "\"Gale Instrument\" Necklace of Enlightenment +1",
+      "item_name": "Necklace",
+      "greatness": 3,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Gale",
+      "name_suffix": "Instrument"
+    },
+    "ring": {
+      "current_name": "Platinum Ring of Reflection",
+      "final_name": "\"Torment Growl\" Platinum Ring of Reflection +1",
+      "item_name": "Platinum Ring",
+      "greatness": 18,
+      "suffix": "of Reflection",
+      "name_prefix": "Torment",
+      "name_suffix": "Growl"
+    }
+  },
+  "1000": {
+    "weapon": {
+      "current_name": "\"Gloom Grasp\" Katana of the Twins +1",
+      "final_name": "\"Gloom Grasp\" Katana of the Twins +1",
+      "item_name": "Katana",
+      "greatness": 20,
+      "suffix": "of the Twins",
+      "name_prefix": "Gloom",
+      "name_suffix": "Grasp"
+    },
+    "chest": {
+      "current_name": "Holy Chestplate",
+      "final_name": "\"Rune Roar\" Holy Chestplate of Reflection +1",
+      "item_name": "Holy Chestplate",
+      "greatness": 13,
+      "suffix": "of Reflection",
+      "name_prefix": "Rune",
+      "name_suffix": "Roar"
+    },
+    "head": {
+      "current_name": "Ancient Helm",
+      "final_name": "\"Viper Song\" Ancient Helm of Rage +1",
+      "item_name": "Ancient Helm",
+      "greatness": 9,
+      "suffix": "of Rage",
+      "name_prefix": "Viper",
+      "name_suffix": "Song"
+    },
+    "waist": {
+      "current_name": "Demonhide Belt of the Twins",
+      "final_name": "\"Armageddon Moon\" Demonhide Belt of the Twins +1",
+      "item_name": "Demonhide Belt",
+      "greatness": 17,
+      "suffix": "of the Twins",
+      "name_prefix": "Armageddon",
+      "name_suffix": "Moon"
+    },
+    "foot": {
+      "current_name": "Leather Boots",
+      "final_name": "\"Dire Shadow\" Leather Boots of Vitriol +1",
+      "item_name": "Leather Boots",
+      "greatness": 12,
+      "suffix": "of Vitriol",
+      "name_prefix": "Dire",
+      "name_suffix": "Shadow"
+    },
+    "hand": {
+      "current_name": "Leather Gloves",
+      "final_name": "\"Glyph Song\" Leather Gloves of Skill +1",
+      "item_name": "Leather Gloves",
+      "greatness": 6,
+      "suffix": "of Skill",
+      "name_prefix": "Glyph",
+      "name_suffix": "Song"
+    },
+    "neck": {
+      "current_name": "Amulet of Giants",
+      "final_name": "\"Storm Glow\" Amulet of Giants +1",
+      "item_name": "Amulet",
+      "greatness": 16,
+      "suffix": "of Giants",
+      "name_prefix": "Storm",
+      "name_suffix": "Glow"
+    },
+    "ring": {
+      "current_name": "Platinum Ring",
+      "final_name": "\"Beast Shadow\" Platinum Ring of Brilliance +1",
+      "item_name": "Platinum Ring",
+      "greatness": 0,
+      "suffix": "of Brilliance",
+      "name_prefix": "Beast",
+      "name_suffix": "Shadow"
+    }
+  },
+  "1001": {
+    "weapon": {
+      "current_name": "Grave Wand",
+      "final_name": "\"Honour Shout\" Grave Wand of Protection +1",
+      "item_name": "Grave Wand",
+      "greatness": 11,
+      "suffix": "of Protection",
+      "name_prefix": "Honour",
+      "name_suffix": "Shout"
+    },
+    "chest": {
+      "current_name": "Robe",
+      "final_name": "\"Rapture Bane\" Robe of Enlightenment +1",
+      "item_name": "Robe",
+      "greatness": 6,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Rapture",
+      "name_suffix": "Bane"
+    },
+    "head": {
+      "current_name": "Ornate Helm",
+      "final_name": "\"Fate Tear\" Ornate Helm of Brilliance +1",
+      "item_name": "Ornate Helm",
+      "greatness": 7,
+      "suffix": "of Brilliance",
+      "name_prefix": "Fate",
+      "name_suffix": "Tear"
+    },
+    "waist": {
+      "current_name": "Linen Sash",
+      "final_name": "\"Ghoul Whisper\" Linen Sash of the Fox +1",
+      "item_name": "Linen Sash",
+      "greatness": 7,
+      "suffix": "of the Fox",
+      "name_prefix": "Ghoul",
+      "name_suffix": "Whisper"
+    },
+    "foot": {
+      "current_name": "Shoes",
+      "final_name": "\"Armageddon Grasp\" Shoes of Giants +1",
+      "item_name": "Shoes",
+      "greatness": 8,
+      "suffix": "of Giants",
+      "name_prefix": "Armageddon",
+      "name_suffix": "Grasp"
+    },
+    "hand": {
+      "current_name": "Chain Gloves",
+      "final_name": "\"Spirit Shadow\" Chain Gloves of Rage +1",
+      "item_name": "Chain Gloves",
+      "greatness": 0,
+      "suffix": "of Rage",
+      "name_prefix": "Spirit",
+      "name_suffix": "Shadow"
+    },
+    "neck": {
+      "current_name": "Amulet",
+      "final_name": "\"Golem Whisper\" Amulet of Reflection +1",
+      "item_name": "Amulet",
+      "greatness": 1,
+      "suffix": "of Reflection",
+      "name_prefix": "Golem",
+      "name_suffix": "Whisper"
+    },
+    "ring": {
+      "current_name": "Gold Ring of Titans",
+      "final_name": "\"Shimmering Bender\" Gold Ring of Titans +1",
+      "item_name": "Gold Ring",
+      "greatness": 17,
+      "suffix": "of Titans",
+      "name_prefix": "Shimmering",
+      "name_suffix": "Bender"
+    }
+  },
+  "1002": {
+    "weapon": {
+      "current_name": "Katana",
+      "final_name": "\"Gloom Grasp\" Katana of Giants +1",
+      "item_name": "Katana",
+      "greatness": 14,
+      "suffix": "of Giants",
+      "name_prefix": "Gloom",
+      "name_suffix": "Grasp"
+    },
+    "chest": {
+      "current_name": "Plate Mail of Giants",
+      "final_name": "\"Wrath Song\" Plate Mail of Giants +1",
+      "item_name": "Plate Mail",
+      "greatness": 18,
+      "suffix": "of Giants",
+      "name_prefix": "Wrath",
+      "name_suffix": "Song"
+    },
+    "head": {
+      "current_name": "Full Helm",
+      "final_name": "\"Glyph Bane\" Full Helm of Anger +1",
+      "item_name": "Full Helm",
+      "greatness": 0,
+      "suffix": "of Anger",
+      "name_prefix": "Glyph",
+      "name_suffix": "Bane"
+    },
+    "waist": {
+      "current_name": "Brightsilk Sash of the Twins",
+      "final_name": "\"Corpse Glow\" Brightsilk Sash of the Twins +1",
+      "item_name": "Brightsilk Sash",
+      "greatness": 16,
+      "suffix": "of the Twins",
+      "name_prefix": "Corpse",
+      "name_suffix": "Glow"
+    },
+    "foot": {
+      "current_name": "Greaves",
+      "final_name": "\"Grim Grasp\" Greaves of the Twins +1",
+      "item_name": "Greaves",
+      "greatness": 2,
+      "suffix": "of the Twins",
+      "name_prefix": "Grim",
+      "name_suffix": "Grasp"
+    },
+    "hand": {
+      "current_name": "Hard Leather Gloves",
+      "final_name": "\"Cataclysm Moon\" Hard Leather Gloves of Detection +1",
+      "item_name": "Hard Leather Gloves",
+      "greatness": 14,
+      "suffix": "of Detection",
+      "name_prefix": "Cataclysm",
+      "name_suffix": "Moon"
+    },
+    "neck": {
+      "current_name": "Amulet",
+      "final_name": "\"Dragon Glow\" Amulet of the Twins +1",
+      "item_name": "Amulet",
+      "greatness": 4,
+      "suffix": "of the Twins",
+      "name_prefix": "Dragon",
+      "name_suffix": "Glow"
+    },
+    "ring": {
+      "current_name": "Platinum Ring",
+      "final_name": "\"Agony Growl\" Platinum Ring of the Fox +1",
+      "item_name": "Platinum Ring",
+      "greatness": 0,
+      "suffix": "of the Fox",
+      "name_prefix": "Agony",
+      "name_suffix": "Growl"
+    }
+  },
+  "1003": {
+    "weapon": {
+      "current_name": "Book",
+      "final_name": "\"Corruption Moon\" Book of Protection +1",
+      "item_name": "Book",
+      "greatness": 5,
+      "suffix": "of Protection",
+      "name_prefix": "Corruption",
+      "name_suffix": "Moon"
+    },
+    "chest": {
+      "current_name": "Chain Mail",
+      "final_name": "\"Dragon Roar\" Chain Mail of Titans +1",
+      "item_name": "Chain Mail",
+      "greatness": 10,
+      "suffix": "of Titans",
+      "name_prefix": "Dragon",
+      "name_suffix": "Roar"
+    },
+    "head": {
+      "current_name": "Full Helm",
+      "final_name": "\"Torment Form\" Full Helm of Rage +1",
+      "item_name": "Full Helm",
+      "greatness": 3,
+      "suffix": "of Rage",
+      "name_prefix": "Torment",
+      "name_suffix": "Form"
+    },
+    "waist": {
+      "current_name": "Wool Sash",
+      "final_name": "\"Miracle Instrument\" Wool Sash of Enlightenment +1",
+      "item_name": "Wool Sash",
+      "greatness": 3,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Miracle",
+      "name_suffix": "Instrument"
+    },
+    "foot": {
+      "current_name": "Divine Slippers of the Twins",
+      "final_name": "\"Light's Root\" Divine Slippers of the Twins +1",
+      "item_name": "Divine Slippers",
+      "greatness": 16,
+      "suffix": "of the Twins",
+      "name_prefix": "Light's",
+      "name_suffix": "Root"
+    },
+    "hand": {
+      "current_name": "Ornate Gauntlets",
+      "final_name": "\"Dragon Root\" Ornate Gauntlets of Protection +1",
+      "item_name": "Ornate Gauntlets",
+      "greatness": 1,
+      "suffix": "of Protection",
+      "name_prefix": "Dragon",
+      "name_suffix": "Root"
+    },
+    "neck": {
+      "current_name": "Pendant",
+      "final_name": "\"Armageddon Peak\" Pendant of Titans +1",
+      "item_name": "Pendant",
+      "greatness": 8,
+      "suffix": "of Titans",
+      "name_prefix": "Armageddon",
+      "name_suffix": "Peak"
+    },
+    "ring": {
+      "current_name": "Titanium Ring",
+      "final_name": "\"Kraken Moon\" Titanium Ring of Rage +1",
+      "item_name": "Titanium Ring",
+      "greatness": 2,
+      "suffix": "of Rage",
+      "name_prefix": "Kraken",
+      "name_suffix": "Moon"
+    }
+  },
+  "1004": {
+    "weapon": {
+      "current_name": "Wand",
+      "final_name": "\"Maelstrom Tear\" Wand of Protection +1",
+      "item_name": "Wand",
+      "greatness": 13,
+      "suffix": "of Protection",
+      "name_prefix": "Maelstrom",
+      "name_suffix": "Tear"
+    },
+    "chest": {
+      "current_name": "Shirt",
+      "final_name": "\"Apocalypse Sun\" Shirt of Enlightenment +1",
+      "item_name": "Shirt",
+      "greatness": 1,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Apocalypse",
+      "name_suffix": "Sun"
+    },
+    "head": {
+      "current_name": "Ancient Helm of Power",
+      "final_name": "\"Brood Growl\" Ancient Helm of Power +1",
+      "item_name": "Ancient Helm",
+      "greatness": 15,
+      "suffix": "of Power",
+      "name_prefix": "Brood",
+      "name_suffix": "Growl"
+    },
+    "waist": {
+      "current_name": "Wool Sash",
+      "final_name": "\"Rapture Instrument\" Wool Sash of Reflection +1",
+      "item_name": "Wool Sash",
+      "greatness": 0,
+      "suffix": "of Reflection",
+      "name_prefix": "Rapture",
+      "name_suffix": "Instrument"
+    },
+    "foot": {
+      "current_name": "Chain Boots",
+      "final_name": "\"Doom Form\" Chain Boots of Detection +1",
+      "item_name": "Chain Boots",
+      "greatness": 12,
+      "suffix": "of Detection",
+      "name_prefix": "Doom",
+      "name_suffix": "Form"
+    },
+    "hand": {
+      "current_name": "Leather Gloves",
+      "final_name": "\"Empyrean Bane\" Leather Gloves of the Fox +1",
+      "item_name": "Leather Gloves",
+      "greatness": 9,
+      "suffix": "of the Fox",
+      "name_prefix": "Empyrean",
+      "name_suffix": "Bane"
+    },
+    "neck": {
+      "current_name": "\"Demon Bite\" Pendant of Reflection +1",
+      "final_name": "\"Demon Bite\" Pendant of Reflection +1",
+      "item_name": "Pendant",
+      "greatness": 20,
+      "suffix": "of Reflection",
+      "name_prefix": "Demon",
+      "name_suffix": "Bite"
+    },
+    "ring": {
+      "current_name": "Bronze Ring",
+      "final_name": "\"Sol Bane\" Bronze Ring of Titans +1",
+      "item_name": "Bronze Ring",
+      "greatness": 9,
+      "suffix": "of Titans",
+      "name_prefix": "Sol",
+      "name_suffix": "Bane"
+    }
+  },
+  "1005": {
+    "weapon": {
+      "current_name": "Quarterstaff",
+      "final_name": "\"Plague Root\" Quarterstaff of Rage +1",
+      "item_name": "Quarterstaff",
+      "greatness": 7,
+      "suffix": "of Rage",
+      "name_prefix": "Plague",
+      "name_suffix": "Root"
+    },
+    "chest": {
+      "current_name": "Robe",
+      "final_name": "\"Miracle Form\" Robe of Giants +1",
+      "item_name": "Robe",
+      "greatness": 6,
+      "suffix": "of Giants",
+      "name_prefix": "Miracle",
+      "name_suffix": "Form"
+    },
+    "head": {
+      "current_name": "Cap",
+      "final_name": "\"Dire Instrument\" Cap of Perfection +1",
+      "item_name": "Cap",
+      "greatness": 0,
+      "suffix": "of Perfection",
+      "name_prefix": "Dire",
+      "name_suffix": "Instrument"
+    },
+    "waist": {
+      "current_name": "Hard Leather Belt",
+      "final_name": "\"Gloom Peak\" Hard Leather Belt of Enlightenment +1",
+      "item_name": "Hard Leather Belt",
+      "greatness": 2,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Gloom",
+      "name_suffix": "Peak"
+    },
+    "foot": {
+      "current_name": "Linen Shoes",
+      "final_name": "\"Apocalypse Sun\" Linen Shoes of Enlightenment +1",
+      "item_name": "Linen Shoes",
+      "greatness": 4,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Apocalypse",
+      "name_suffix": "Sun"
+    },
+    "hand": {
+      "current_name": "Chain Gloves",
+      "final_name": "\"Brood Form\" Chain Gloves of the Twins +1",
+      "item_name": "Chain Gloves",
+      "greatness": 6,
+      "suffix": "of the Twins",
+      "name_prefix": "Brood",
+      "name_suffix": "Form"
+    },
+    "neck": {
+      "current_name": "Necklace of Vitriol",
+      "final_name": "\"Rapture Shadow\" Necklace of Vitriol +1",
+      "item_name": "Necklace",
+      "greatness": 18,
+      "suffix": "of Vitriol",
+      "name_prefix": "Rapture",
+      "name_suffix": "Shadow"
+    },
+    "ring": {
+      "current_name": "Gold Ring",
+      "final_name": "\"Wrath Instrument\" Gold Ring of Enlightenment +1",
+      "item_name": "Gold Ring",
+      "greatness": 9,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Wrath",
+      "name_suffix": "Instrument"
+    }
+  },
+  "1006": {
+    "weapon": {
+      "current_name": "Club",
+      "final_name": "\"Pain Roar\" Club of Anger +1",
+      "item_name": "Club",
+      "greatness": 1,
+      "suffix": "of Anger",
+      "name_prefix": "Pain",
+      "name_suffix": "Roar"
+    },
+    "chest": {
+      "current_name": "Demon Husk of Protection",
+      "final_name": "\"Armageddon Shout\" Demon Husk of Protection +1",
+      "item_name": "Demon Husk",
+      "greatness": 17,
+      "suffix": "of Protection",
+      "name_prefix": "Armageddon",
+      "name_suffix": "Shout"
+    },
+    "head": {
+      "current_name": "Dragon's Crown",
+      "final_name": "\"Agony Growl\" Dragon's Crown of Perfection +1",
+      "item_name": "Dragon's Crown",
+      "greatness": 6,
+      "suffix": "of Perfection",
+      "name_prefix": "Agony",
+      "name_suffix": "Growl"
+    },
+    "waist": {
+      "current_name": "Wool Sash",
+      "final_name": "\"Viper Bane\" Wool Sash of Anger +1",
+      "item_name": "Wool Sash",
+      "greatness": 12,
+      "suffix": "of Anger",
+      "name_prefix": "Viper",
+      "name_suffix": "Bane"
+    },
+    "foot": {
+      "current_name": "Demonhide Boots",
+      "final_name": "\"Woe Moon\" Demonhide Boots of Brilliance +1",
+      "item_name": "Demonhide Boots",
+      "greatness": 2,
+      "suffix": "of Brilliance",
+      "name_prefix": "Woe",
+      "name_suffix": "Moon"
+    },
+    "hand": {
+      "current_name": "Hard Leather Gloves",
+      "final_name": "\"Woe Shout\" Hard Leather Gloves of Vitriol +1",
+      "item_name": "Hard Leather Gloves",
+      "greatness": 11,
+      "suffix": "of Vitriol",
+      "name_prefix": "Woe",
+      "name_suffix": "Shout"
+    },
+    "neck": {
+      "current_name": "Pendant of Brilliance",
+      "final_name": "\"Grim Shout\" Pendant of Brilliance +1",
+      "item_name": "Pendant",
+      "greatness": 17,
+      "suffix": "of Brilliance",
+      "name_prefix": "Grim",
+      "name_suffix": "Shout"
+    },
+    "ring": {
+      "current_name": "Gold Ring",
+      "final_name": "\"Dusk Roar\" Gold Ring of Reflection +1",
+      "item_name": "Gold Ring",
+      "greatness": 4,
+      "suffix": "of Reflection",
+      "name_prefix": "Dusk",
+      "name_suffix": "Roar"
+    }
+  },
+  "1007": {
+    "weapon": {
+      "current_name": "Scimitar",
+      "final_name": "\"Behemoth Glow\" Scimitar of Brilliance +1",
+      "item_name": "Scimitar",
+      "greatness": 1,
+      "suffix": "of Brilliance",
+      "name_prefix": "Behemoth",
+      "name_suffix": "Glow"
+    },
+    "chest": {
+      "current_name": "Plate Mail",
+      "final_name": "\"Wrath Instrument\" Plate Mail of the Fox +1",
+      "item_name": "Plate Mail",
+      "greatness": 0,
+      "suffix": "of the Fox",
+      "name_prefix": "Wrath",
+      "name_suffix": "Instrument"
+    },
+    "head": {
+      "current_name": "Divine Hood",
+      "final_name": "\"Foe Moon\" Divine Hood of Protection +1",
+      "item_name": "Divine Hood",
+      "greatness": 5,
+      "suffix": "of Protection",
+      "name_prefix": "Foe",
+      "name_suffix": "Moon"
+    },
+    "waist": {
+      "current_name": "Heavy Belt",
+      "final_name": "\"Golem Whisper\" Heavy Belt of Perfection +1",
+      "item_name": "Heavy Belt",
+      "greatness": 4,
+      "suffix": "of Perfection",
+      "name_prefix": "Golem",
+      "name_suffix": "Whisper"
+    },
+    "foot": {
+      "current_name": "Holy Greaves of Skill",
+      "final_name": "\"Horror Shadow\" Holy Greaves of Skill +1",
+      "item_name": "Holy Greaves",
+      "greatness": 18,
+      "suffix": "of Skill",
+      "name_prefix": "Horror",
+      "name_suffix": "Shadow"
+    },
+    "hand": {
+      "current_name": "\"Mind Grasp\" Demon's Hands of Skill +1",
+      "final_name": "\"Mind Grasp\" Demon's Hands of Skill +1",
+      "item_name": "Demon's Hands",
+      "greatness": 20,
+      "suffix": "of Skill",
+      "name_prefix": "Mind",
+      "name_suffix": "Grasp"
+    },
+    "neck": {
+      "current_name": "Amulet",
+      "final_name": "\"Dragon Root\" Amulet of Vitriol +1",
+      "item_name": "Amulet",
+      "greatness": 1,
+      "suffix": "of Vitriol",
+      "name_prefix": "Dragon",
+      "name_suffix": "Root"
+    },
+    "ring": {
+      "current_name": "Silver Ring",
+      "final_name": "\"Armageddon Grasp\" Silver Ring of Rage +1",
+      "item_name": "Silver Ring",
+      "greatness": 2,
+      "suffix": "of Rage",
+      "name_prefix": "Armageddon",
+      "name_suffix": "Grasp"
+    }
+  },
+  "1008": {
+    "weapon": {
+      "current_name": "Grave Wand",
+      "final_name": "\"Victory Shout\" Grave Wand of the Twins +1",
+      "item_name": "Grave Wand",
+      "greatness": 8,
+      "suffix": "of the Twins",
+      "name_prefix": "Victory",
+      "name_suffix": "Shout"
+    },
+    "chest": {
+      "current_name": "\"Hypnotic Tear\" Studded Leather Armor of Rage",
+      "final_name": "\"Hypnotic Tear\" Studded Leather Armor of Rage +1",
+      "item_name": "Studded Leather Armor",
+      "greatness": 19,
+      "suffix": "of Rage",
+      "name_prefix": "Hypnotic",
+      "name_suffix": "Tear"
+    },
+    "head": {
+      "current_name": "Demon Crown",
+      "final_name": "\"Pandemonium Moon\" Demon Crown of Skill +1",
+      "item_name": "Demon Crown",
+      "greatness": 8,
+      "suffix": "of Skill",
+      "name_prefix": "Pandemonium",
+      "name_suffix": "Moon"
+    },
+    "waist": {
+      "current_name": "Heavy Belt",
+      "final_name": "\"Vortex Sun\" Heavy Belt of Anger +1",
+      "item_name": "Heavy Belt",
+      "greatness": 13,
+      "suffix": "of Anger",
+      "name_prefix": "Vortex",
+      "name_suffix": "Sun"
+    },
+    "foot": {
+      "current_name": "Demonhide Boots",
+      "final_name": "\"Pandemonium Bite\" Demonhide Boots of Reflection +1",
+      "item_name": "Demonhide Boots",
+      "greatness": 2,
+      "suffix": "of Reflection",
+      "name_prefix": "Pandemonium",
+      "name_suffix": "Bite"
+    },
+    "hand": {
+      "current_name": "Wool Gloves",
+      "final_name": "\"Horror Song\" Wool Gloves of the Twins +1",
+      "item_name": "Wool Gloves",
+      "greatness": 3,
+      "suffix": "of the Twins",
+      "name_prefix": "Horror",
+      "name_suffix": "Song"
+    },
+    "neck": {
+      "current_name": "Necklace",
+      "final_name": "\"Gale Shadow\" Necklace of Detection +1",
+      "item_name": "Necklace",
+      "greatness": 9,
+      "suffix": "of Detection",
+      "name_prefix": "Gale",
+      "name_suffix": "Shadow"
+    },
+    "ring": {
+      "current_name": "Gold Ring",
+      "final_name": "\"Doom Form\" Gold Ring of Vitriol +1",
+      "item_name": "Gold Ring",
+      "greatness": 3,
+      "suffix": "of Vitriol",
+      "name_prefix": "Doom",
+      "name_suffix": "Form"
+    }
+  },
+  "1009": {
+    "weapon": {
+      "current_name": "Maul",
+      "final_name": "\"Demon Bite\" Maul of the Fox +1",
+      "item_name": "Maul",
+      "greatness": 8,
+      "suffix": "of the Fox",
+      "name_prefix": "Demon",
+      "name_suffix": "Bite"
+    },
+    "chest": {
+      "current_name": "Holy Chestplate",
+      "final_name": "\"Maelstrom Sun\" Holy Chestplate of the Fox +1",
+      "item_name": "Holy Chestplate",
+      "greatness": 10,
+      "suffix": "of the Fox",
+      "name_prefix": "Maelstrom",
+      "name_suffix": "Sun"
+    },
+    "head": {
+      "current_name": "Great Helm",
+      "final_name": "\"Pandemonium Moon\" Great Helm of Giants +1",
+      "item_name": "Great Helm",
+      "greatness": 5,
+      "suffix": "of Giants",
+      "name_prefix": "Pandemonium",
+      "name_suffix": "Moon"
+    },
+    "waist": {
+      "current_name": "Silk Sash",
+      "final_name": "\"Demon Peak\" Silk Sash of Enlightenment +1",
+      "item_name": "Silk Sash",
+      "greatness": 5,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Demon",
+      "name_suffix": "Peak"
+    },
+    "foot": {
+      "current_name": "Demonhide Boots",
+      "final_name": "\"Brimstone Bite\" Demonhide Boots of Anger +1",
+      "item_name": "Demonhide Boots",
+      "greatness": 2,
+      "suffix": "of Anger",
+      "name_prefix": "Brimstone",
+      "name_suffix": "Bite"
+    },
+    "hand": {
+      "current_name": "Divine Gloves of Titans",
+      "final_name": "\"Apocalypse Whisper\" Divine Gloves of Titans +1",
+      "item_name": "Divine Gloves",
+      "greatness": 16,
+      "suffix": "of Titans",
+      "name_prefix": "Apocalypse",
+      "name_suffix": "Whisper"
+    },
+    "neck": {
+      "current_name": "Pendant",
+      "final_name": "\"Kraken Bite\" Pendant of Enlightenment +1",
+      "item_name": "Pendant",
+      "greatness": 2,
+      "suffix": "of Enlightenment",
+      "name_prefix": "Kraken",
+      "name_suffix": "Bite"
+    },
+    "ring": {
+      "current_name": "Silver Ring",
+      "final_name": "\"Eagle Peak\" Silver Ring of Anger +1",
+      "item_name": "Silver Ring",
+      "greatness": 14,
+      "suffix": "of Anger",
+      "name_prefix": "Eagle",
+      "name_suffix": "Peak"
+    }
+  }
+}

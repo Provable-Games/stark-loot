@@ -1,0 +1,7 @@
+target
+deployments/
+.env
+.snfoundry_cache/
+snfoundry_trace/
+coverage/
+__pycache__/

@@ -1,0 +1,1737 @@
+{
+  "scarb": "scarb 2.20.1 (dd18779a1 2026-08-21)\ncairo: 2.20.0 (https://crates.io/crates/cairo-lang-compiler/2.20.0)\nsierra: 1.9.3\narch: x86_64-unknown-linux-gnu",
+  "snforge": "snforge 0.63.0",
+  "profile": "release",
+  "repetitions": 2,
+  "fuzzer_seed": 360029,
+  "measurement_boundary": "Single probe entrypoint, including ABI handling and nested calls; excludes test setup/assertions. Not total transaction fees.",
+  "artifact_build": "snforge test contract artifacts (default optimization), not --no-optimization",
+  "source_sha256": {
+    ".tool-versions": "524d1e23dccd5d4b1d2347bc70d04374c77edd9069ba01685d5087365192da61",
+    "Scarb.lock": "c1a4e371adc2382fbd9383498f46e840f82452bfafa6d396a587a97bec2d84d6",
+    "Scarb.toml": "9f88bd53d7a2aae7fa128e5caa47250cab9219f41c523c9df79b700b87d51842",
+    "src/constants.cairo": "d56b2f9d42bf1aa093e025c0e248171bdfdb5d4bdc04898f7488d6311a264dfc",
+    "src/contract.cairo": "6fb637fb42d2234761f119f53339c1f5959b545f24af21c4189989aa5086bd47",
+    "src/core.cairo": "d6789867c2919f7970674089f958d5438da3241a48ed5d1f4f479aefccb36d15",
+    "src/item_id.cairo": "a9eed83fa651ba22b7a930ea92b5d0c5e914deb55f95b1eeb5d1986d8acd977f",
+    "src/lib.cairo": "0adea1550d828df2f1174eeed13de2258d78824120e5782f42e330b138886962",
+    "src/packed.cairo": "4eb29ca39778ffc9dae503cc1a5c63500c042524b910f39e44d1902325a372fb",
+    "src/types.cairo": "ad41290b573834c35dc539ce9fc4db43bedff4f463771a649d5692e2fe265ae8",
+    "tests/packing_oracle.cairo": "6b16c80ffe08b21eb3bed82067ca7123258350b8ae4541bdf803046817fd92c7",
+    "tests/packing_probes.cairo": "a754f67c7067ddf22b998e3e5996fe1eb67b2771a5dd521ee3128d456ebe9231"
+  },
+  "cases": {
+    "pack_golden": {
+      "contract": "PackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 104230,
+          "trace": {
+            "contract": "PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 104230,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 200000,
+          "trace": {
+            "contract": "PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 904,
+                "n_memory_holes": 40,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 121
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "pack_u256_golden": {
+      "contract": "U256PackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1627624,
+          "trace": {
+            "contract": "U256PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1627624,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 5280000,
+          "trace": {
+            "contract": "U256PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 12968,
+                "n_memory_holes": 441,
+                "builtin_instance_counter": {
+                  "bitwise_builtin": 78,
+                  "range_check_builtin": 3283
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "unpack_golden": {
+      "contract": "UnpackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 71560,
+          "trace": {
+            "contract": "UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 71560,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 280000,
+          "trace": {
+            "contract": "UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 585,
+                "n_memory_holes": 9,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 168
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "unpack_u256_golden": {
+      "contract": "U256UnpackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 8302126,
+          "trace": {
+            "contract": "U256UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 8302126,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 26720000,
+          "trace": {
+            "contract": "U256UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 67315,
+                "n_memory_holes": 2748,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 16684,
+                  "bitwise_builtin": 82
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "pack_zero": {
+      "contract": "PackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 104230,
+          "trace": {
+            "contract": "PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 104230,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 200000,
+          "trace": {
+            "contract": "PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 904,
+                "n_memory_holes": 40,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 121
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "pack_u256_zero": {
+      "contract": "U256PackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1627624,
+          "trace": {
+            "contract": "U256PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1627624,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 5280000,
+          "trace": {
+            "contract": "U256PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 12968,
+                "n_memory_holes": 441,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 3283,
+                  "bitwise_builtin": 78
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "unpack_zero": {
+      "contract": "UnpackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 71560,
+          "trace": {
+            "contract": "UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 71560,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 280000,
+          "trace": {
+            "contract": "UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 579,
+                "n_memory_holes": 14,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 166
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "unpack_u256_zero": {
+      "contract": "U256UnpackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 8301186,
+          "trace": {
+            "contract": "U256UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 8301186,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 26720000,
+          "trace": {
+            "contract": "U256UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 67298,
+                "n_memory_holes": 2748,
+                "builtin_instance_counter": {
+                  "bitwise_builtin": 82,
+                  "range_check_builtin": 16682
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "pack_maximum": {
+      "contract": "PackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 104230,
+          "trace": {
+            "contract": "PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 104230,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 200000,
+          "trace": {
+            "contract": "PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 904,
+                "n_memory_holes": 40,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 121
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "pack_u256_maximum": {
+      "contract": "U256PackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1627624,
+          "trace": {
+            "contract": "U256PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1627624,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 5280000,
+          "trace": {
+            "contract": "U256PackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 12968,
+                "n_memory_holes": 441,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 3283,
+                  "bitwise_builtin": 78
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "unpack_maximum": {
+      "contract": "UnpackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 71560,
+          "trace": {
+            "contract": "UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 71560,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 280000,
+          "trace": {
+            "contract": "UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 585,
+                "n_memory_holes": 9,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 168
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "unpack_u256_maximum": {
+      "contract": "U256UnpackProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 8302126,
+          "trace": {
+            "contract": "U256UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 8302126,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 26720000,
+          "trace": {
+            "contract": "U256UnpackProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 67315,
+                "n_memory_holes": 2748,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 16684,
+                  "bitwise_builtin": 82
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "item_weapon": {
+      "contract": "ItemProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 18400,
+          "trace": {
+            "contract": "ItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 18400,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 80000,
+          "trace": {
+            "contract": "ItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 149,
+                "n_memory_holes": 7,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 30
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "full_item_weapon": {
+      "contract": "FullItemProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 71360,
+          "trace": {
+            "contract": "FullItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 71360,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 280000,
+          "trace": {
+            "contract": "FullItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 570,
+                "n_memory_holes": 16,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 168
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "item_ring": {
+      "contract": "ItemProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 18300,
+          "trace": {
+            "contract": "ItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 18300,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 80000,
+          "trace": {
+            "contract": "ItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 161,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 30
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "full_item_ring": {
+      "contract": "FullItemProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 71360,
+          "trace": {
+            "contract": "FullItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 71360,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 280000,
+          "trace": {
+            "contract": "FullItemProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 583,
+                "n_memory_holes": 9,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 168
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {}
+            },
+            "nested_calls": []
+          }
+        }
+      }
+    },
+    "native_library_one": {
+      "contract": "NativeLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1946908,
+          "trace": {
+            "contract": "NativeLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1777748,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1699798,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1640000,
+          "trace": {
+            "contract": "NativeLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3249,
+                "n_memory_holes": 175,
+                "builtin_instance_counter": {
+                  "bitwise_builtin": 64,
+                  "range_check_builtin": 481,
+                  "keccak_builtin": 0
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 2584,
+                    "n_memory_holes": 128,
+                    "builtin_instance_counter": {
+                      "bitwise_builtin": 64,
+                      "range_check_builtin": 395,
+                      "keccak_builtin": 0
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "packed_library_one": {
+      "contract": "PackedLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1916978,
+          "trace": {
+            "contract": "PackedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1747818,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1741898,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1640000,
+          "trace": {
+            "contract": "PackedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3033,
+                "n_memory_holes": 128,
+                "builtin_instance_counter": {
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 64,
+                  "range_check_builtin": 441
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 2977,
+                    "n_memory_holes": 128,
+                    "builtin_instance_counter": {
+                      "range_check_builtin": 435,
+                      "keccak_builtin": 0,
+                      "bitwise_builtin": 64
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "materialized_library_one": {
+      "contract": "MaterializedLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1991668,
+          "trace": {
+            "contract": "MaterializedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1822508,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1741898,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1720000,
+          "trace": {
+            "contract": "MaterializedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3649,
+                "n_memory_holes": 137,
+                "builtin_instance_counter": {
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 64,
+                  "range_check_builtin": 608
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 2977,
+                    "n_memory_holes": 128,
+                    "builtin_instance_counter": {
+                      "keccak_builtin": 0,
+                      "bitwise_builtin": 64,
+                      "range_check_builtin": 435
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "native_library_max_id": {
+      "contract": "NativeLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 2003578,
+          "trace": {
+            "contract": "NativeLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1834418,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1756468,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1720000,
+          "trace": {
+            "contract": "NativeLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3734,
+                "n_memory_holes": 135,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 592,
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 64
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 3069,
+                    "n_memory_holes": 88,
+                    "builtin_instance_counter": {
+                      "keccak_builtin": 0,
+                      "bitwise_builtin": 64,
+                      "range_check_builtin": 506
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "packed_library_max_id": {
+      "contract": "PackedLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1973648,
+          "trace": {
+            "contract": "PackedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1804488,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1798568,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1640000,
+          "trace": {
+            "contract": "PackedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3518,
+                "n_memory_holes": 88,
+                "builtin_instance_counter": {
+                  "bitwise_builtin": 64,
+                  "keccak_builtin": 0,
+                  "range_check_builtin": 552
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 3462,
+                    "n_memory_holes": 88,
+                    "builtin_instance_counter": {
+                      "range_check_builtin": 546,
+                      "keccak_builtin": 0,
+                      "bitwise_builtin": 64
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "materialized_library_max_id": {
+      "contract": "MaterializedLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 2048338,
+          "trace": {
+            "contract": "MaterializedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1879178,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1798568,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1920000,
+          "trace": {
+            "contract": "MaterializedLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 4134,
+                "n_memory_holes": 97,
+                "builtin_instance_counter": {
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 64,
+                  "range_check_builtin": 719
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 3462,
+                    "n_memory_holes": 88,
+                    "builtin_instance_counter": {
+                      "keccak_builtin": 0,
+                      "bitwise_builtin": 64,
+                      "range_check_builtin": 546
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "native_library_item_weapon": {
+      "contract": "NativeItemLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1947808,
+          "trace": {
+            "contract": "NativeItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1778648,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1699798,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1640000,
+          "trace": {
+            "contract": "NativeItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3245,
+                "n_memory_holes": 182,
+                "builtin_instance_counter": {
+                  "bitwise_builtin": 64,
+                  "keccak_builtin": 0,
+                  "range_check_builtin": 481
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 2584,
+                    "n_memory_holes": 128,
+                    "builtin_instance_counter": {
+                      "range_check_builtin": 395,
+                      "bitwise_builtin": 64,
+                      "keccak_builtin": 0
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "packed_library_item_weapon": {
+      "contract": "PackedItemLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1933508,
+          "trace": {
+            "contract": "PackedItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1764348,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1741898,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1640000,
+          "trace": {
+            "contract": "PackedItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3163,
+                "n_memory_holes": 135,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 470,
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 64
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 2977,
+                    "n_memory_holes": 128,
+                    "builtin_instance_counter": {
+                      "bitwise_builtin": 64,
+                      "keccak_builtin": 0,
+                      "range_check_builtin": 435
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "native_library_item_ring": {
+      "contract": "NativeItemLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1947908,
+          "trace": {
+            "contract": "NativeItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1778748,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1699798,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1640000,
+          "trace": {
+            "contract": "NativeItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3259,
+                "n_memory_holes": 175,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 481,
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 64
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 2584,
+                    "n_memory_holes": 128,
+                    "builtin_instance_counter": {
+                      "bitwise_builtin": 64,
+                      "keccak_builtin": 0,
+                      "range_check_builtin": 395
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "packed_library_item_ring": {
+      "contract": "PackedItemLibraryProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 1933408,
+          "trace": {
+            "contract": "PackedItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 1764248,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 1741898,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 1640000,
+          "trace": {
+            "contract": "PackedItemLibraryProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 3175,
+                "n_memory_holes": 128,
+                "builtin_instance_counter": {
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 64,
+                  "range_check_builtin": 470
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 8,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_packed_bag",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 2977,
+                    "n_memory_holes": 128,
+                    "builtin_instance_counter": {
+                      "keccak_builtin": 0,
+                      "bitwise_builtin": 64,
+                      "range_check_builtin": 435
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 8,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

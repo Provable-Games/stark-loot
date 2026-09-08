@@ -1,0 +1,443 @@
+{
+  "scarb": "scarb 2.20.1 (dd18779a1 2026-08-21)\ncairo: 2.20.0 (https://crates.io/crates/cairo-lang-compiler/2.20.0)\nsierra: 1.9.3\narch: x86_64-unknown-linux-gnu",
+  "snforge": "snforge 0.63.0",
+  "profile": "release",
+  "repetitions": 2,
+  "fuzzer_seed": 360029,
+  "measurement_boundary": "Single probe entrypoint, including ABI handling and nested calls; excludes test setup/assertions. Not total transaction fees.",
+  "artifact_build": "snforge test contract artifacts (default optimization), not --no-optimization",
+  "source_sha256": {
+    ".tool-versions": "533ac200be8f869c794a7a794125b5d9994de0ef0f00d4c1e2cb3b38fb2d5370",
+    "Scarb.lock": "f1d470c2e436713ea47eea7c412d126055aa4d25b0edfe962b5e29a1501b22ac",
+    "Scarb.toml": "3cbe9853753086c6e121bf9e75e8fd89650211f4c7741179d9a330ace8887133",
+    "src/constants.cairo": "d56b2f9d42bf1aa093e025c0e248171bdfdb5d4bdc04898f7488d6311a264dfc",
+    "src/contract.cairo": "9843970dd9a535efb44ed15b8d2c3201e57253b61ae1173690b1fabc39e5f047",
+    "src/core.cairo": "0522d612bf8ec11639312c483190f0882ed51943a2c8230f3e265755f3b3ec72",
+    "src/item_id.cairo": "a9eed83fa651ba22b7a930ea92b5d0c5e914deb55f95b1eeb5d1986d8acd977f",
+    "src/lib.cairo": "4c91d340bcb8b3bcbfaad846340b5ff1a38cc15eb7a20733825dfc68dc59a5dd",
+    "src/types.cairo": "ad41290b573834c35dc539ce9fc4db43bedff4f463771a649d5692e2fe265ae8",
+    "tests/scalar_benchmarks.cairo": "f892dbe3d375eab01d21f0b7009808cbb3e06d43d7f714f4fc89cb69b7d1d578"
+  },
+  "cases": {
+    "id": {
+      "contract": "IdProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 322021,
+          "trace": {
+            "contract": "IdProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 222861,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_weapon_id",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 216401,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 240000,
+          "trace": {
+            "contract": "IdProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 420,
+                "n_memory_holes": 15,
+                "builtin_instance_counter": {
+                  "bitwise_builtin": 8,
+                  "keccak_builtin": 0,
+                  "range_check_builtin": 62
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_weapon_id",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 360,
+                    "n_memory_holes": 15,
+                    "builtin_instance_counter": {
+                      "keccak_builtin": 0,
+                      "range_check_builtin": 54,
+                      "bitwise_builtin": 8
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "greatness": {
+      "contract": "GreatnessProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 322021,
+          "trace": {
+            "contract": "GreatnessProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 222861,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_weapon_greatness",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 216401,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 240000,
+          "trace": {
+            "contract": "GreatnessProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 420,
+                "n_memory_holes": 15,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 62,
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 8
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_weapon_greatness",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 360,
+                    "n_memory_holes": 15,
+                    "builtin_instance_counter": {
+                      "bitwise_builtin": 8,
+                      "range_check_builtin": 54,
+                      "keccak_builtin": 0
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ring_id_max": {
+      "contract": "RingIdProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 372731,
+          "trace": {
+            "contract": "RingIdProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 273571,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_ring_id",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 267111,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 400000,
+          "trace": {
+            "contract": "RingIdProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 859,
+                "n_memory_holes": 14,
+                "builtin_instance_counter": {
+                  "keccak_builtin": 0,
+                  "range_check_builtin": 158,
+                  "bitwise_builtin": 8
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_ring_id",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 799,
+                    "n_memory_holes": 14,
+                    "builtin_instance_counter": {
+                      "bitwise_builtin": 8,
+                      "range_check_builtin": 150,
+                      "keccak_builtin": 0
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ring_greatness_max": {
+      "contract": "RingGreatnessProbe",
+      "measurements": {
+        "sierra-gas": {
+          "entrypoint_l2_gas": 372731,
+          "trace": {
+            "contract": "RingGreatnessProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 0,
+                "n_memory_holes": 0,
+                "builtin_instance_counter": {}
+              },
+              "gas_consumed": 273571,
+              "syscall_counter": {
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_ring_greatness",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 0,
+                    "n_memory_holes": 0,
+                    "builtin_instance_counter": {}
+                  },
+                  "gas_consumed": 267111,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        },
+        "cairo-steps": {
+          "entrypoint_l2_gas": 400000,
+          "trace": {
+            "contract": "RingGreatnessProbe",
+            "function": "run",
+            "resources": {
+              "vm_resources": {
+                "n_steps": 859,
+                "n_memory_holes": 14,
+                "builtin_instance_counter": {
+                  "range_check_builtin": 158,
+                  "keccak_builtin": 0,
+                  "bitwise_builtin": 8
+                }
+              },
+              "gas_consumed": 0,
+              "syscall_counter": {
+                "LibraryCall": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                },
+                "Keccak": {
+                  "call_count": 1,
+                  "linear_factor": 0
+                }
+              }
+            },
+            "nested_calls": [
+              {
+                "contract": "stark_loot",
+                "function": "get_ring_greatness",
+                "resources": {
+                  "vm_resources": {
+                    "n_steps": 799,
+                    "n_memory_holes": 14,
+                    "builtin_instance_counter": {
+                      "keccak_builtin": 0,
+                      "range_check_builtin": 150,
+                      "bitwise_builtin": 8
+                    }
+                  },
+                  "gas_consumed": 0,
+                  "syscall_counter": {
+                    "Keccak": {
+                      "call_count": 1,
+                      "linear_factor": 0
+                    }
+                  }
+                },
+                "nested_calls": []
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,969 @@
+{
+  "source_revision": "414a309fb574c61dbc41f9fc447afa2b932aa0ca",
+  "compiler": "universal-sierra-compiler 2.10.0",
+  "compiler_sha256": "b1d8c8a1e3885cbc3dd3fc78a2ec37cf442c58b8119438f05ff3c465c192f7d1",
+  "classes": {
+    "stark_loot": {
+      "casm_words": 20830,
+      "sierra_words": 8568,
+      "largest_segment": 1764,
+      "entrypoints": {
+        "EXTERNAL": 43,
+        "L1_HANDLER": 0,
+        "CONSTRUCTOR": 0
+      },
+      "casm_sha256": "bf672af953181a89507aad7ce06ecf337cffe986fb7ec559d532318a003c622e",
+      "sierra_sha256": "65612c92847d8bf68b9febb7e1ed06c99ad48f51443199e46e05d9f388db6c09",
+      "casm_path": "target/release/stark_loot_stark_loot.compiled_contract_class.json",
+      "sierra_path": "target/release/stark_loot_stark_loot.contract_class.json",
+      "test_artifact_matches_production": true
+    },
+    "stark_loot_cache": {
+      "casm_words": 30340,
+      "sierra_words": 11107,
+      "largest_segment": 2037,
+      "entrypoints": {
+        "EXTERNAL": 49,
+        "L1_HANDLER": 0,
+        "CONSTRUCTOR": 0
+      },
+      "casm_sha256": "fb4a37792dd169b7e7b4bff6f7413a646aea176cf67c49315573ca60a2e3aa68",
+      "sierra_sha256": "8432ef5cb76a927c46037590de2cb80fc5edb21cc95b2af0e8f983fa28aa19a5",
+      "casm_path": "target/release/stark_loot_stark_loot_cache.compiled_contract_class.json",
+      "sierra_path": "target/release/stark_loot_stark_loot_cache.contract_class.json",
+      "test_artifact_matches_production": true
+    },
+    "CacheAddToCacheProbe": {
+      "casm_words": 243,
+      "sierra_words": 211,
+      "largest_segment": 206,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "d2768b2681dcfae3e7a90da1babfc8d920e76215a1db62469ad2e2117f9d0160",
+      "sierra_sha256": "eacb3caa2208187f1c439d68b07aed8e91cd4bcc3712391f61dd79feaefacbb7",
+      "casm_path": "target/cache-artifacts/CacheAddToCacheProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheAddToCacheProbe.test.contract_class.json"
+    },
+    "CacheCompatGetBagNamesProbe": {
+      "casm_words": 2282,
+      "sierra_words": 848,
+      "largest_segment": 862,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "578c4eb07422b59241f45fc705e3f88f1b857e55351ffabc5feec196d938b32f",
+      "sierra_sha256": "f8d4bfd15c82827d95e3a5325253104c2a989ab8ea46d0b3d45daa851755386f",
+      "casm_path": "target/cache-artifacts/CacheCompatGetBagNamesProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetBagNamesProbe.test.contract_class.json"
+    },
+    "CacheCompatGetBagProbe": {
+      "casm_words": 1081,
+      "sierra_words": 524,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "49ccdfe494382c49a46985dd6789fddd447cff3b5d5b2956a0fefa4830c90f96",
+      "sierra_sha256": "5cee7e5388794ee30f18b9bfd36771b789147604402c1c28080a8c724aef1341",
+      "casm_path": "target/cache-artifacts/CacheCompatGetBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetBagProbe.test.contract_class.json"
+    },
+    "CacheCompatGetChestGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "4931455ecfa4f670ff78697685f4f8e25c95745e103bf60f8763aa25fa963e36",
+      "sierra_sha256": "953543de0d0210c6afd30dfda2509c2fe55cba7543c26c6032e02b22bc5faad5",
+      "casm_path": "target/cache-artifacts/CacheCompatGetChestGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetChestGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetChestIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "bea902bb77e73389f0e302cebc3a0185d914fd470e5c176b272d90c693cd2919",
+      "sierra_sha256": "1507ed02d602a91ffd072084997f8c49a4be443406a8b57440c8b11689712da7",
+      "casm_path": "target/cache-artifacts/CacheCompatGetChestIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetChestIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetChestItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "cfd45f28d7cf6b798a17862bb9a438a27f1ce56454cce5d9f8ffc88cb1482bdb",
+      "sierra_sha256": "eb77c35f34d6efadec996d74328f30f3c748f31dce2386e9ac52c62f0c1320ed",
+      "casm_path": "target/cache-artifacts/CacheCompatGetChestItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetChestItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetChestNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "85921b6ff2f08be0ed015ce2663efd933f66379a2dddf60b95bcddcd1e61e091",
+      "sierra_sha256": "3873636a87f989f2911f05a0a35f8a30b9bbcc098f600a703cdd55bed5588422",
+      "casm_path": "target/cache-artifacts/CacheCompatGetChestNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetChestNameProbe.test.contract_class.json"
+    },
+    "CacheCompatGetFootGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "1e85a2684a199c627b0dd2fe00c9df62f01b857c534bf379008f66ac9b32ddf1",
+      "sierra_sha256": "01e4d405c960e66d5b6084ba3c9a1d53e2da2f42add886f466beff913c6221ba",
+      "casm_path": "target/cache-artifacts/CacheCompatGetFootGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetFootGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetFootIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "1192b1d1c9461f4b8ba6250ea7e1b7970544cba7fb1ff7cb0d47b5adadf5620a",
+      "sierra_sha256": "443bc0e10b9cff793f04fcd7039ae27660cc6cc5d77397061175fc7227920a2b",
+      "casm_path": "target/cache-artifacts/CacheCompatGetFootIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetFootIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetFootItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "2c5179425d2898d1507dd7c21be6542bcdbbc99f0a31270afbe009b34030d943",
+      "sierra_sha256": "d12eb6cf2af5c7d8fae2fe78a878c56f3e233bfb72153ab0108e65f9777ccf98",
+      "casm_path": "target/cache-artifacts/CacheCompatGetFootItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetFootItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetFootNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "a014b90eba22be21e7a39f611d56af0ed15a76b4f9ebe80890f940d90aafc68d",
+      "sierra_sha256": "bac79df31219e2fb5a65465a7c23da5a775a5a8e500aa0e8cd20dc3365816de1",
+      "casm_path": "target/cache-artifacts/CacheCompatGetFootNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetFootNameProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHandGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "8ce1758d1a093f2df02e28f8e008b88a2be49b4eccf714f1c199064901be4928",
+      "sierra_sha256": "a1d88491ca5ac4f74429340ebebbbb6f891bae5826b3946fcd22474fc92bbc71",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHandGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHandGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHandIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "ca853a68ba7f6689dca9b3def202523df10d4cdffb1a7de6e9954aab7f3e3543",
+      "sierra_sha256": "b569b591e92fd67f16d9c4dcb8a8b11aa3188e62fbdedc4e701bf4d00d16f1a0",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHandIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHandIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHandItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "a39e04a99d7d4e039c83e3472f0b6d078babdf678a47eb41a282d5d330c56478",
+      "sierra_sha256": "ccd4ed5a20d574eab5a4b8d208c17b89f2e0b6006957ef6a5066ad18d18b5716",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHandItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHandItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHandNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "efe67db53066c8d9c2335a03963172470d6c38e3db6f56ea69090570339874c4",
+      "sierra_sha256": "b36213acbc9539eb07ff59f947263b0addc06e16900a61a8f1ec97feafaf7d1a",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHandNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHandNameProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHeadGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "402fc8148ea6d066b23c459a071ee3d430042fb9c95f13525217e8a2feff4d58",
+      "sierra_sha256": "f7a3069df723bfffe0adaf9e6b32ae5d1fac279b966b3a3c09216c3836bb1738",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHeadGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHeadGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHeadIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "12e3d6f7ba78a9a1c38db0d5ef85d2264cdad57341e67413e59687b9769c4b35",
+      "sierra_sha256": "84af8eb405600bdec68294cb7175875a8ed95eac2be0c00d2279f7565dbb4b25",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHeadIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHeadIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHeadItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "83a677f4c0ad8d02ca6dccccad2a411ad14971dd7cf562c30891baba541a8e08",
+      "sierra_sha256": "fb762cd5ea705433b5f1ca2ed7b9d82455d9c8fff72206509ea21efa2434fc28",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHeadItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHeadItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetHeadNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "6a25919268592a44daea5bf2e2d66dad5364a8eaba65fa1e0956e537f4bba8f9",
+      "sierra_sha256": "8e3fa4d6d326af3c95b389e9c61a17e14edea30dc1c5f681c95fc23ccfba5d07",
+      "casm_path": "target/cache-artifacts/CacheCompatGetHeadNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetHeadNameProbe.test.contract_class.json"
+    },
+    "CacheCompatGetNeckGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "7aec37d8070cbbc94669f377b840e5d7ef0a085807054314ef527348c34cd7b6",
+      "sierra_sha256": "957742369c036c43faa38e96726bd739b18a9111fe6e80c74b1337a7a384b80e",
+      "casm_path": "target/cache-artifacts/CacheCompatGetNeckGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetNeckGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetNeckIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "b01ee98da5c6de788e2e2e4fa66601aa7e185eb0c30116aed8f4a3a19b3288fa",
+      "sierra_sha256": "43cf719ee426202c8d75f250decc4a2ac724d7f9152bf892e565c66ae8f26ccb",
+      "casm_path": "target/cache-artifacts/CacheCompatGetNeckIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetNeckIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetNeckItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "ede8781c2c00d934f6ca4bfb4e2d610c097967361ad850cfa34a3f803253c227",
+      "sierra_sha256": "2aecfaa8b22436a3dd9b929e3a49a11869dfb7c43dcc4442b12db7622f5fd89f",
+      "casm_path": "target/cache-artifacts/CacheCompatGetNeckItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetNeckItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetNeckNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "557c073f640fcc8809cec4af8fd7d2e2da96034da61f6e4d54953e401ad1eddf",
+      "sierra_sha256": "ae30012ef4f4a10993c18a93a7c193653476c15f5f6a78fb5762ddbb169a1efb",
+      "casm_path": "target/cache-artifacts/CacheCompatGetNeckNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetNeckNameProbe.test.contract_class.json"
+    },
+    "CacheCompatGetPackedBagProbe": {
+      "casm_words": 243,
+      "sierra_words": 211,
+      "largest_segment": 206,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "ffca38bd4b27566ea10062efa154df3c3eb09fac9fd350cd8234b29d06f6f05b",
+      "sierra_sha256": "819f68595374e2b354f5578dc628bd9c571339485161c41f8d78dfe2fb950280",
+      "casm_path": "target/cache-artifacts/CacheCompatGetPackedBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetPackedBagProbe.test.contract_class.json"
+    },
+    "CacheCompatGetRingGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "712d17beb6993e2b52036a87ef5b58e8a5d47b4754fcb81deec195f4cba5eb97",
+      "sierra_sha256": "a958e5a39a1057f67a5293b3a2e99404d59e64fb2535fa112f0781e035d969ae",
+      "casm_path": "target/cache-artifacts/CacheCompatGetRingGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetRingGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetRingIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "5e18d8627dc23cfae25fc87f34206655aca30f46198a538493f40bee8ddca4c7",
+      "sierra_sha256": "b811f772a310d9de7009407d0a91a41330ec316a6e868f6337a8853fbff67f87",
+      "casm_path": "target/cache-artifacts/CacheCompatGetRingIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetRingIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetRingItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "b49147a0da7628b7a07a295f7ff42a9caf2e5a6281900fc2cab42688a32f8a66",
+      "sierra_sha256": "2f46d16ebaa30f19783c39bf727c0e18b3de90508aeeaa6236a9a7c2e538ae7a",
+      "casm_path": "target/cache-artifacts/CacheCompatGetRingItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetRingItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetRingNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "c15f4b1daa2f5731e70f259967fdbbca1752a13dc430331562107bf5b403f0ee",
+      "sierra_sha256": "eecfd8f9991b9433e61fb09448f53127477853aa97fd30d7a01473593ff2a82d",
+      "casm_path": "target/cache-artifacts/CacheCompatGetRingNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetRingNameProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWaistGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "10dbd5fd160032f13f7db86fd79b82bd4482e44067b159d8f615a836488c9be5",
+      "sierra_sha256": "ea872afb83e34e425a3469d1bde366e6cc6d917a8305b2dc83bf19d9a3b54a41",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWaistGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWaistGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWaistIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "f7987e59376eb743a3ea0810281a7679a309ab4ea5e8a32d88574595376bd014",
+      "sierra_sha256": "4a6255f64dd3ebb2d3e9e752bb1607a5c0aa84f3f5ad69d9040446b4a4982009",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWaistIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWaistIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWaistItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "4675c3c1226ec4163f977b3c943ca0dd4dd16ed71a5a7752d0143bab2b792f3d",
+      "sierra_sha256": "54b83261c0786e3ecb175a9f7763a6d6433938b0cf515f5d456d534c69d8c6f2",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWaistItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWaistItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWaistNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "1666aa0fba961f0c3d08c27a101f5bad31ab32b8bc6d715b74c17769beb2c2da",
+      "sierra_sha256": "f6c490b6a3280797f1fd02c0103c75cb18b3806ec9acabee2f1c94766e89e7a3",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWaistNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWaistNameProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWeaponGreatnessProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "55b35ead11329955c0d170567aa820f86cdabcd05eda0cc7838efaebf5a218e1",
+      "sierra_sha256": "f6cee63eda36ea127a9f734e98982aeefca2e9079f5e4377bf0b706cc99c3466",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWeaponGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWeaponGreatnessProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWeaponIdProbe": {
+      "casm_words": 309,
+      "sierra_words": 215,
+      "largest_segment": 137,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "261e1a5327b258d10f9207d998ee172e8a4b80e78cc376f5caf4bb0ff69f3435",
+      "sierra_sha256": "9534c54091b8170511bba4df0041085a94d23e8debb65ad2a302f8729498b818",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWeaponIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWeaponIdProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWeaponItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "8b1e0de9bcc7451d1f82a7ce9ae8703f9412a24634c43b1a6746aef367d77b48",
+      "sierra_sha256": "acff34337893a707c0b4871d364fc9719bbb0c0460aa57db96a2eea658342439",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWeaponItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWeaponItemProbe.test.contract_class.json"
+    },
+    "CacheCompatGetWeaponNameProbe": {
+      "casm_words": 1023,
+      "sierra_words": 642,
+      "largest_segment": 340,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "cc2fc5ec9954382f1fbd6403bea8c65a238683376f96c46117a526c544131dab",
+      "sierra_sha256": "ab27604cdf0aff0fd7f0727009b25bacfe67da0fd37324d769314c25784dfe23",
+      "casm_path": "target/cache-artifacts/CacheCompatGetWeaponNameProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheCompatGetWeaponNameProbe.test.contract_class.json"
+    },
+    "CacheGetCachedBagNamesProbe": {
+      "casm_words": 2282,
+      "sierra_words": 848,
+      "largest_segment": 862,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "b15bdac935f1b83f7a621e3566192998c6580f3bdbd7de865fe9aeeb769c1b52",
+      "sierra_sha256": "a15699c18da4d6eafbbe774cd3f2443bd4b3d8dbdb2be47959b3a4ffd5b3df45",
+      "casm_path": "target/cache-artifacts/CacheGetCachedBagNamesProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheGetCachedBagNamesProbe.test.contract_class.json"
+    },
+    "CacheGetCachedBagProbe": {
+      "casm_words": 1081,
+      "sierra_words": 524,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "481c50c6dce8a5340eb66e4a3807d146daf5f42d56cd8fc610563c237af2a533",
+      "sierra_sha256": "853a3fe3732f5cfa34afda369e28b09e3cd026efcc86ebfcd448c61d10209951",
+      "casm_path": "target/cache-artifacts/CacheGetCachedBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheGetCachedBagProbe.test.contract_class.json"
+    },
+    "CacheGetCachedPackedBagProbe": {
+      "casm_words": 243,
+      "sierra_words": 211,
+      "largest_segment": 206,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "07e337c6192fba5356bd4d3ddcfa943befc6609159df8f80af13e83c1ae2e9c9",
+      "sierra_sha256": "f42b23a7dbbd5025bb2954804230ba1748d378b614ff7960b888ce6f63c99eb3",
+      "casm_path": "target/cache-artifacts/CacheGetCachedPackedBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheGetCachedPackedBagProbe.test.contract_class.json"
+    },
+    "CacheIsCachedProbe": {
+      "casm_words": 268,
+      "sierra_words": 239,
+      "largest_segment": 231,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "803c20eae24c7d9265dd826d600ec74d821a2bf67ccd2c8247da5f8420855090",
+      "sierra_sha256": "923bee14d4f9f50d495b33a0d3b0ccfab38a5fc7fe5ed00b9a0c9f2771c934a6",
+      "casm_path": "target/cache-artifacts/CacheIsCachedProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheIsCachedProbe.test.contract_class.json"
+    },
+    "CacheMissGetCachedBagNamesProbe": {
+      "casm_words": 2098,
+      "sierra_words": 754,
+      "largest_segment": 862,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "29f8a959a38cdf515df22543efec49d52c9f7fad7db58a9808e2a077e958b79a",
+      "sierra_sha256": "0d20d0238ee452db0c18dd52d0a3e1ea5524de4673fe9f1d6f2e80260824780a",
+      "casm_path": "target/cache-artifacts/CacheMissGetCachedBagNamesProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheMissGetCachedBagNamesProbe.test.contract_class.json"
+    },
+    "CacheMissGetCachedBagProbe": {
+      "casm_words": 1051,
+      "sierra_words": 381,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "3703f8f6b6c35198122eb7ae6fad8a3b46034098cce67b6e821ff2afe0ad2b47",
+      "sierra_sha256": "4df7d3dcb8686ac815b0f84381a1c530a3fbad12bb9915a811d6bb0687641c3f",
+      "casm_path": "target/cache-artifacts/CacheMissGetCachedBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheMissGetCachedBagProbe.test.contract_class.json"
+    },
+    "CacheMissGetCachedItemProbe": {
+      "casm_words": 582,
+      "sierra_words": 306,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "8d4b7d596b4e549c8746809076fc300945c3a1b4e5358ad55f247723ca9ff376",
+      "sierra_sha256": "f528c9852346c47f0a7578caf83040071eb64d696bb2246fc9c93b8789e85a8f",
+      "casm_path": "target/cache-artifacts/CacheMissGetCachedItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheMissGetCachedItemProbe.test.contract_class.json"
+    },
+    "CacheMissGetCachedPackedBagProbe": {
+      "casm_words": 319,
+      "sierra_words": 254,
+      "largest_segment": 229,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "14aa731ab97fe56be669259adb4a5a006927e7feb01b2d10583d6b223e79caf5",
+      "sierra_sha256": "a6eeae271adb5e24cfe0dafa6632ea4f62913f8a4a03957165055d6618ab4853",
+      "casm_path": "target/cache-artifacts/CacheMissGetCachedPackedBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheMissGetCachedPackedBagProbe.test.contract_class.json"
+    },
+    "CacheReuseExpandedProbe": {
+      "casm_words": 1062,
+      "sierra_words": 387,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "f47e89c58d60eaf98e6337da0562134affb7a9c56d5dc9d472970ea239a756eb",
+      "sierra_sha256": "381464e80183b0c71b0b721c448adf6847bd458daab063b5f19ef76c9f49107c",
+      "casm_path": "target/cache-artifacts/CacheReuseExpandedProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheReuseExpandedProbe.test.contract_class.json"
+    },
+    "CacheReusePackedProbe": {
+      "casm_words": 1292,
+      "sierra_words": 448,
+      "largest_segment": 319,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "7000ed1f68520259abfd1352ccd2fbf41fe6a3f9f144d11e253b055148e2b6a0",
+      "sierra_sha256": "a3ed83e59ea8d1813e120ec724439f05d64309f8997ae54b8ac6a404708aa2dd",
+      "casm_path": "target/cache-artifacts/CacheReusePackedProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheReusePackedProbe.test.contract_class.json"
+    },
+    "CacheReuseSelectedProbe": {
+      "casm_words": 852,
+      "sierra_words": 361,
+      "largest_segment": 404,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "dfae304a0685b41f13098c663927b33eaac5dae19362e8c407988763c6e05562",
+      "sierra_sha256": "93dbd6849fbe99019235479319a089ddc029884ffcb77ff469d7970188e4fbc2",
+      "casm_path": "target/cache-artifacts/CacheReuseSelectedProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheReuseSelectedProbe.test.contract_class.json"
+    },
+    "CacheScalarDirectFootGreatnessProbe": {
+      "casm_words": 331,
+      "sierra_words": 237,
+      "largest_segment": 164,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "ec08589b52ec0247714698f82c8d53de4e3a0fa4ae7cfec71d9f7802db298721",
+      "sierra_sha256": "0c309a17ffdc7aa9249a7d4d8f697efb6c9523a4b440f13dc8ac780447aaaf1f",
+      "casm_path": "target/cache-artifacts/CacheScalarDirectFootGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarDirectFootGreatnessProbe.test.contract_class.json"
+    },
+    "CacheScalarDirectFootIdProbe": {
+      "casm_words": 321,
+      "sierra_words": 235,
+      "largest_segment": 154,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "7527acf146db7f751800a69d49539a1c6e333b7a93858ded9a895aba2693737b",
+      "sierra_sha256": "40091250fc1acbb45982fe55775b8b95ab426251b4d5f1820d192459624287ab",
+      "casm_path": "target/cache-artifacts/CacheScalarDirectFootIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarDirectFootIdProbe.test.contract_class.json"
+    },
+    "CacheScalarDirectRingGreatnessProbe": {
+      "casm_words": 331,
+      "sierra_words": 237,
+      "largest_segment": 164,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "001e2b82894efb33e8875aedc8f3272fa6b0faef84b262b307929c7f464e83fd",
+      "sierra_sha256": "70cc16054ce32d05f39cfb9c2c23199a98ce038b659c21717c1537e0588cff5f",
+      "casm_path": "target/cache-artifacts/CacheScalarDirectRingGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarDirectRingGreatnessProbe.test.contract_class.json"
+    },
+    "CacheScalarDirectRingIdProbe": {
+      "casm_words": 321,
+      "sierra_words": 235,
+      "largest_segment": 154,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "dfaf3e658c11fea2f44d8742ebbffe20a95d0365757251fe5972108ccf822567",
+      "sierra_sha256": "e7a37f7a216aa306b5e0a3c23c080d421909fad376ad605a13555a2916d46f87",
+      "casm_path": "target/cache-artifacts/CacheScalarDirectRingIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarDirectRingIdProbe.test.contract_class.json"
+    },
+    "CacheScalarDirectWeaponGreatnessProbe": {
+      "casm_words": 330,
+      "sierra_words": 235,
+      "largest_segment": 163,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "62bd511946a1f5c842e948ef3243902fe41198f2cfb25e4f698c5099ac86ea95",
+      "sierra_sha256": "a743a8dddcf6c4f7607d22a4c5b3427bae2e3c79baacc2a6d794f6caf36bc1b8",
+      "casm_path": "target/cache-artifacts/CacheScalarDirectWeaponGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarDirectWeaponGreatnessProbe.test.contract_class.json"
+    },
+    "CacheScalarDirectWeaponIdProbe": {
+      "casm_words": 320,
+      "sierra_words": 233,
+      "largest_segment": 153,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "395f49b7eaf61a84eb61c15e89a74d62c1289cd5c9df5d4cd1d9c3b3a244f47e",
+      "sierra_sha256": "c4258682c8d2dc6e02dd368ba93f6f3ba72dce69693f86c79ceba17465176c18",
+      "casm_path": "target/cache-artifacts/CacheScalarDirectWeaponIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarDirectWeaponIdProbe.test.contract_class.json"
+    },
+    "CacheScalarItemFootGreatnessProbe": {
+      "casm_words": 428,
+      "sierra_words": 259,
+      "largest_segment": 262,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "3e2a673dbcf4405e770b0f7cd0c9e064b40f566c2cbde40b599e887501e5f057",
+      "sierra_sha256": "4be4e4387cef1cc4e911d3c3f7510b7058f0172b1bf03d0f02b61e78a429f205",
+      "casm_path": "target/cache-artifacts/CacheScalarItemFootGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarItemFootGreatnessProbe.test.contract_class.json"
+    },
+    "CacheScalarItemFootIdProbe": {
+      "casm_words": 428,
+      "sierra_words": 259,
+      "largest_segment": 262,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "1dcf28e76d9868878af74a17a0083b9df74da235995498ab22acb212bbe2e19d",
+      "sierra_sha256": "0603e43fbc2fa581929b5b7ab2a4dbead52a3f76690b730c0d31e3e0f53b48d0",
+      "casm_path": "target/cache-artifacts/CacheScalarItemFootIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarItemFootIdProbe.test.contract_class.json"
+    },
+    "CacheScalarItemRingGreatnessProbe": {
+      "casm_words": 428,
+      "sierra_words": 259,
+      "largest_segment": 262,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "c4248095b49fc891df93c153238a85e8cbf136ffc835b2e57593d93cb4c09741",
+      "sierra_sha256": "62e9dfbe927a306e7c214d281b371872779171c2ca2572da054a6aa4c018eca2",
+      "casm_path": "target/cache-artifacts/CacheScalarItemRingGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarItemRingGreatnessProbe.test.contract_class.json"
+    },
+    "CacheScalarItemRingIdProbe": {
+      "casm_words": 428,
+      "sierra_words": 259,
+      "largest_segment": 262,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "94b4ace756c7285c357097bdd9dfa5c6cee743bac499d19c21bc4ddbaf382454",
+      "sierra_sha256": "599eefc0d16e02c41fcfe917b45816bb21af5dc938f0db0dfd756d99be8ee8a1",
+      "casm_path": "target/cache-artifacts/CacheScalarItemRingIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarItemRingIdProbe.test.contract_class.json"
+    },
+    "CacheScalarItemWeaponGreatnessProbe": {
+      "casm_words": 427,
+      "sierra_words": 257,
+      "largest_segment": 261,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "2d19b27cdfeedb390ce1141cdc005c6a2ccac83260568362ede78f2deb9274e4",
+      "sierra_sha256": "96ada956e4d241656f55e5d1b1019c3aa7de4a74f16e17b2e9452b01f1284534",
+      "casm_path": "target/cache-artifacts/CacheScalarItemWeaponGreatnessProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarItemWeaponGreatnessProbe.test.contract_class.json"
+    },
+    "CacheScalarItemWeaponIdProbe": {
+      "casm_words": 427,
+      "sierra_words": 257,
+      "largest_segment": 261,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "a1160edf428d3d52f3480529260925d828037a7b6d88bb2e2c60c25eb88a7582",
+      "sierra_sha256": "4284ad6d4bebc9e14912a8730a13f6dd40fae227cd0a8036a38c0b9e65d1cd8b",
+      "casm_path": "target/cache-artifacts/CacheScalarItemWeaponIdProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheScalarItemWeaponIdProbe.test.contract_class.json"
+    },
+    "CacheSelectedFootProbe": {
+      "casm_words": 560,
+      "sierra_words": 276,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "d0b7c06f9c6023275970e1bd73adb0ecda15b4f0a0188250802925f9b532fb5f",
+      "sierra_sha256": "9ebc7acffa18d69078e55d3d9f67ca77c6f6e8591c21c7c38dc9003dedd68103",
+      "casm_path": "target/cache-artifacts/CacheSelectedFootProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheSelectedFootProbe.test.contract_class.json"
+    },
+    "CacheSelectedRingProbe": {
+      "casm_words": 560,
+      "sierra_words": 276,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "b27ad52937784b43e32f4742a18a47ded042e9d6ae773043db66a0ab77537622",
+      "sierra_sha256": "d901121452873c72b00155a77ba0af24de4ba9e6263ada75a7548ade221622b1",
+      "casm_path": "target/cache-artifacts/CacheSelectedRingProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheSelectedRingProbe.test.contract_class.json"
+    },
+    "CacheSelectedWeaponProbe": {
+      "casm_words": 560,
+      "sierra_words": 276,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "3294fcce7be9bb4b968d20fddc1917f39bc8b0d78660ce9a63a66364773e9b5a",
+      "sierra_sha256": "1ef50e5131097a57d606c0e5e7d90379617b41f426861d21755aff54fe1086ac",
+      "casm_path": "target/cache-artifacts/CacheSelectedWeaponProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_CacheSelectedWeaponProbe.test.contract_class.json"
+    },
+    "UnchangedLibraryGetBagProbe": {
+      "casm_words": 1081,
+      "sierra_words": 524,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "2731ecfce15d2291d2596b33c1dee40534b0274aa0a01785de895835cb5c6a11",
+      "sierra_sha256": "e728e494a872253aac9284b1ca99738456291fa765b486cec1cf3e7abc8587a5",
+      "casm_path": "target/cache-artifacts/UnchangedLibraryGetBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_UnchangedLibraryGetBagProbe.test.contract_class.json"
+    },
+    "UnchangedLibraryGetPackedBagProbe": {
+      "casm_words": 243,
+      "sierra_words": 211,
+      "largest_segment": 206,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "e264466aee80586f79c171fa2fe71aeba854b513289d83e01ccc30cbb3e66d10",
+      "sierra_sha256": "7e14c461d36e7bb43525768cbfe4dcf174935b128b0fe1216d439f8d4a2f4ed8",
+      "casm_path": "target/cache-artifacts/UnchangedLibraryGetPackedBagProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_UnchangedLibraryGetPackedBagProbe.test.contract_class.json"
+    },
+    "UnchangedLibraryGetWeaponItemProbe": {
+      "casm_words": 505,
+      "sierra_words": 277,
+      "largest_segment": 260,
+      "entrypoints": {
+        "CONSTRUCTOR": 0,
+        "EXTERNAL": 1,
+        "L1_HANDLER": 0
+      },
+      "casm_sha256": "89e6133faf2123f4d5e33e4e16edcf2f3ef3a84af99f376ed7b337e04d7b0dc7",
+      "sierra_sha256": "9bd366628bef607ac9b6a271161fee35c01c9b924b9a187c8e3a5ff6f362c668",
+      "casm_path": "target/cache-artifacts/UnchangedLibraryGetWeaponItemProbe.1.casm.json",
+      "sierra_path": "target/release/stark_loot_tests_UnchangedLibraryGetWeaponItemProbe.test.contract_class.json"
+    }
+  },
+  "source_sha256": {
+    ".tool-versions": "524d1e23dccd5d4b1d2347bc70d04374c77edd9069ba01685d5087365192da61",
+    "Scarb.lock": "c1a4e371adc2382fbd9383498f46e840f82452bfafa6d396a587a97bec2d84d6",
+    "Scarb.toml": "5d7b4b2eea257c164d99d13ae1a6046daa22e1ecde6df2084ae627a473f69b26",
+    "scripts/bench_cache.py": "a5005e66c5bce116497cb835090c852b39a2238add49c7f50fe39e539c5d0085",
+    "scripts/cache_artifacts.py": "6c1b7890584188642bf0ca30feccc2d1290cf41ed62bc860f04f6c9bafcba35c",
+    "scripts/check_cache_resources.py": "1dedde43e81003c6201b0e6758c08629d66682f29c130713199db21767d0b4d9",
+    "scripts/make_cache_probes.py": "3f1bf02a8ed7e3fc14400ac19bf918984dd87cf31d2502e6c3e7e3d0598f3c43",
+    "scripts/prepare_cache_fixtures.py": "de63da581949bbd3a13fc801761c4e6d8fa4103557d94d96fd257e6f44a2fb47",
+    "src/cache.cairo": "429c347c596ab84fd1bd0462dd9e19a3787a115db8b916579405f75686d0d0ce",
+    "src/constants.cairo": "d56b2f9d42bf1aa093e025c0e248171bdfdb5d4bdc04898f7488d6311a264dfc",
+    "src/contract.cairo": "6fb637fb42d2234761f119f53339c1f5959b545f24af21c4189989aa5086bd47",
+    "src/core.cairo": "9a310daa376abd8951ea41b644c17464f81daeec94ad33c0b525de59c1600914",
+    "src/item_id.cairo": "a9eed83fa651ba22b7a930ea92b5d0c5e914deb55f95b1eeb5d1986d8acd977f",
+    "src/lib.cairo": "5927cf1200e5bad3956cb6282d18a63a42d2522d05481ceb5be6d93da9356b29",
+    "src/packed.cairo": "0ff8e91acc94f3374a1494ae8fe8463cc715491d4c177d84a655822b09dd519e",
+    "src/types.cairo": "ad41290b573834c35dc539ce9fc4db43bedff4f463771a649d5692e2fe265ae8",
+    "tests/cache.cairo": "e20ecf5aa14716ef1b50ce55f325984b1a887203dfa09d626b743362264207a6",
+    "tests/cache_exhaustive.cairo": "1fef59a63c23e460d73b5fe9d9982e7f16dc79bb4e729347ac91db6ab0bae6c9",
+    "tests/cache_probes.cairo": "d9c430f368b21050869db74ae51cfbe259f2721bd1a63206e1d0c532fc2b66d5",
+    "tests/cache_scalar_candidate.cairo": "2d58790495304e8c3108fd2336f230439f5ba6ea4745dc081ce167d272ec8e43"
+  }
+}

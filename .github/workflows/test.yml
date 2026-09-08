@@ -1,0 +1,168 @@
+name: Lint and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint_and_test:
+    name: Lint and test Cairo
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Extract tool versions
+        run: |
+          SCARB_VERSION=$(grep '^scarb ' .tool-versions | awk '{print $2}')
+          FOUNDRY_VERSION=$(grep '^starknet-foundry ' .tool-versions | awk '{print $2}')
+          COVERAGE_VERSION=$(grep '^cairo-coverage ' .tool-versions | awk '{print $2}')
+          PYTHON_VERSION=$(grep '^python ' .tool-versions | awk '{print $2}')
+          echo "SCARB_VERSION=$SCARB_VERSION" >> "$GITHUB_ENV"
+          echo "FOUNDRY_VERSION=$FOUNDRY_VERSION" >> "$GITHUB_ENV"
+          echo "COVERAGE_VERSION=$COVERAGE_VERSION" >> "$GITHUB_ENV"
+          echo "PYTHON_VERSION=$PYTHON_VERSION" >> "$GITHUB_ENV"
+
+      - name: Setup Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # Persist only these tools, not the runner's entire preinstalled tool cache.
+      - name: Cache Cairo toolchain
+        id: cairo-toolchain-cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ runner.tool_cache }}/scarb
+            ${{ runner.tool_cache }}/starknet-foundry
+            ~/.local/bin/cairo-coverage
+          key: cairo-tools-v1-${{ runner.os }}-${{ runner.arch }}-${{ env.SCARB_VERSION }}-${{ env.FOUNDRY_VERSION }}-${{ env.COVERAGE_VERSION }}
+
+      - name: Setup Scarb
+        uses: software-mansion/setup-scarb@2a96b748888e3329ee44ac9ac073d930e692b3cd # v1.6.2
+        with:
+          scarb-version: ${{ env.SCARB_VERSION }}
+          # setup-scarb manages the dependency and target caches using Scarb.lock.
+          cache: true
+          cache-targets: true
+
+      - name: Setup Starknet Foundry
+        uses: foundry-rs/setup-snfoundry@16e23ddd0e2845f38727c92f4b913a7b728cda9e # v6.0.0
+        with:
+          starknet-foundry-version: ${{ env.FOUNDRY_VERSION }}
+
+      - name: Install cairo-coverage
+        if: steps.cairo-toolchain-cache.outputs.cache-hit != 'true'
+        run: curl -fsSL "https://raw.githubusercontent.com/software-mansion/cairo-coverage/v${COVERAGE_VERSION}/scripts/install.sh" | sh -s -- "v${COVERAGE_VERSION}"
+
+      - name: Add cairo-coverage to PATH
+        run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Check generated cache probes
+        run: python3 scripts/make_cache_probes.py --check
+
+      - name: Format check
+        run: scarb fmt --check
+
+      - name: Check and report release CASM size
+        run: |
+          scarb --release build
+          python3 scripts/check_casm_size.py
+
+      - name: Exhaustive cache and u64 boundary parity through production insertion
+        run: |
+          python3 scripts/test_all.py --require-tests cache_exhaustive:: --release --max-n-steps 4294967295 --max-threads 1
+          python3 scripts/test_all.py --require-tests u64_boundaries_and_fixed_seed_random --release --max-n-steps 4294967295 --max-threads 1
+
+      - name: Check cache read/write/hash resource invariants
+        run: python3 scripts/check_cache_resources.py
+
+      - name: Check coverage fixture sample
+        run: python3 scripts/check_fixture_sample.py
+
+      - name: Test Python Loot parity and fixture tooling
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Check independent packing oracle
+        run: snforge test packing_oracle --max-n-steps 4294967295
+
+      - name: Check isolated packing benchmarks against committed evidence
+        run: |
+          python3 scripts/bench_packing.py
+          python3 scripts/check_packing_benchmarks.py
+
+      - name: Run tests with coverage
+        # The deliberately slow whole-u256 oracle is checked above without collecting its
+        # enormous debug trace. Probes also use that oracle for test-side expectations.
+        run: >-
+          snforge test --coverage --max-n-steps 4294967295
+          --skip all_loot_items_match_verbose_fixture
+          --skip packing_oracle --skip packing_probes
+          --skip cache_exhaustive --skip cache_probes
+          --skip u64_boundaries_and_fixed_seed_random
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
+        with:
+          file: ./coverage/coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cairo-test-diagnostics
+          path: |
+            target/cache-resources/
+            target/packing-benchmarks/
+          if-no-files-found: ignore
+
+  cache_benchmarks:
+    name: Cache benchmark regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Extract tool versions
+        run: |
+          echo "SCARB_VERSION=$(awk '$1 == "scarb" {print $2}' .tool-versions)" >> "$GITHUB_ENV"
+          echo "FOUNDRY_VERSION=$(awk '$1 == "starknet-foundry" {print $2}' .tool-versions)" >> "$GITHUB_ENV"
+          echo "PYTHON_VERSION=$(awk '$1 == "python" {print $2}' .tool-versions)" >> "$GITHUB_ENV"
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - uses: software-mansion/setup-scarb@2a96b748888e3329ee44ac9ac073d930e692b3cd # v1.6.2
+        with:
+          scarb-version: ${{ env.SCARB_VERSION }}
+          cache: true
+          cache-targets: true
+      - uses: foundry-rs/setup-snfoundry@16e23ddd0e2845f38727c92f4b913a7b728cda9e # v6.0.0
+        with:
+          starknet-foundry-version: ${{ env.FOUNDRY_VERSION }}
+      - name: Build release production and probe artifacts
+        run: |
+          scarb --release build
+          snforge test cache_probes:: --release --max-n-steps 4294967295 --max-threads 1
+      - name: Verify production equivalence and measure all caller artifacts
+        run: python3 scripts/cache_artifacts.py
+      - name: Reproduce all 105 cache cases twice in both accounting modes
+        run: python3 scripts/bench_cache.py --jobs 2
+      - name: Compare cache measurements and sizes with committed evidence
+        run: python3 scripts/check_cache_benchmarks.py
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cache-benchmark-diagnostics
+          path: |
+            target/cache-benchmarks/
+            target/cache-artifacts/
+          if-no-files-found: ignore

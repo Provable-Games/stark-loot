@@ -1,0 +1,26 @@
+[package]
+name = "stark_loot"
+version = "0.3.0"
+edition = "2024_07"
+
+[dependencies]
+starknet = "2.20.0"
+
+[dev-dependencies]
+snforge_std = "0.63.0"
+
+[[target.starknet-contract]]
+name = "stark_loot"
+sierra = true
+casm = true
+
+[scripts]
+test = "python3 scripts/test_all.py"
+
+[tool.scarb]
+allow-prebuilt-plugins = ["snforge_std"]
+
+[profile.dev.cairo]
+unstable-add-statements-functions-debug-info = true
+unstable-add-statements-code-locations-debug-info = true
+inlining-strategy = "avoid"

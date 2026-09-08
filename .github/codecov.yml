@@ -1,0 +1,27 @@
+# Keep the source patch gate separate from test-helper instrumentation.
+# src/core.cairo includes inline unit tests; this is a source-path filter,
+# not a claim that every counted line ships in the production class.
+coverage:
+  status:
+    patch:
+      default:
+        target: 80%
+        paths:
+          - "src/**"
+      test_helpers:
+        target: 80%
+        informational: true
+        paths:
+          - "tests/**"
+component_management:
+  individual_components:
+    - component_id: source
+      name: Cairo source
+      paths:
+        - "src/**"
+    - component_id: test_helpers
+      name: Cairo test helpers
+      paths:
+        - "tests/**"
+comment:
+  layout: "header, diff, components"

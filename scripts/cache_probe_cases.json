@@ -1,0 +1,737 @@
+{
+  "get_cached_packed_bag_1": {
+    "contract": "CacheGetCachedPackedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_packed_bag_8000": {
+    "contract": "CacheGetCachedPackedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_bag_1": {
+    "contract": "CacheGetCachedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_bag_8000": {
+    "contract": "CacheGetCachedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_bag_names_1": {
+    "contract": "CacheGetCachedBagNamesProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_bag_names_8000": {
+    "contract": "CacheGetCachedBagNamesProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "is_cached_1": {
+    "contract": "CacheIsCachedProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "is_cached_8000": {
+    "contract": "CacheIsCachedProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "is_cached_miss": {
+    "contract": "CacheIsCachedProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "add_to_cache_1": {
+    "contract": "CacheAddToCacheProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "add_to_cache_8000": {
+    "contract": "CacheAddToCacheProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "insert_1": {
+    "contract": "CacheAddToCacheProbe",
+    "reads": 1,
+    "writes": 1,
+    "keccak": 8,
+    "events": 1
+  },
+  "insert_8000": {
+    "contract": "CacheAddToCacheProbe",
+    "reads": 1,
+    "writes": 1,
+    "keccak": 8,
+    "events": 1
+  },
+  "selected_weapon_1": {
+    "contract": "CacheSelectedWeaponProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "selected_weapon_8000": {
+    "contract": "CacheSelectedWeaponProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "selected_foot_1": {
+    "contract": "CacheSelectedFootProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "selected_foot_8000": {
+    "contract": "CacheSelectedFootProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "selected_ring_1": {
+    "contract": "CacheSelectedRingProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "selected_ring_8000": {
+    "contract": "CacheSelectedRingProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_bag_hit": {
+    "contract": "CacheCompatGetBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_bag_miss_1": {
+    "contract": "CacheCompatGetBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_bag_miss_8000": {
+    "contract": "CacheCompatGetBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_bag_library_1": {
+    "contract": "UnchangedLibraryGetBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_bag_deployed_1": {
+    "contract": "CacheCompatGetBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_bag_library_8000": {
+    "contract": "UnchangedLibraryGetBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_bag_deployed_8000": {
+    "contract": "CacheCompatGetBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_packed_bag_hit": {
+    "contract": "CacheCompatGetPackedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_packed_bag_miss_1": {
+    "contract": "CacheCompatGetPackedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_packed_bag_miss_8000": {
+    "contract": "CacheCompatGetPackedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_packed_bag_library_1": {
+    "contract": "UnchangedLibraryGetPackedBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_packed_bag_deployed_1": {
+    "contract": "CacheCompatGetPackedBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_packed_bag_library_8000": {
+    "contract": "UnchangedLibraryGetPackedBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_packed_bag_deployed_8000": {
+    "contract": "CacheCompatGetPackedBagProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 8,
+    "events": 0
+  },
+  "get_bag_names_hit": {
+    "contract": "CacheCompatGetBagNamesProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_weapon_item_hit": {
+    "contract": "CacheCompatGetWeaponItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_weapon_item_miss_1": {
+    "contract": "CacheCompatGetWeaponItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_item_miss_8000": {
+    "contract": "CacheCompatGetWeaponItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_item_library_1": {
+    "contract": "UnchangedLibraryGetWeaponItemProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_item_deployed_1": {
+    "contract": "CacheCompatGetWeaponItemProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_item_library_8000": {
+    "contract": "UnchangedLibraryGetWeaponItemProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_item_deployed_8000": {
+    "contract": "CacheCompatGetWeaponItemProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_id_hit": {
+    "contract": "CacheCompatGetWeaponIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_weapon_id_miss_1": {
+    "contract": "CacheCompatGetWeaponIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_id_miss_8000": {
+    "contract": "CacheCompatGetWeaponIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_greatness_hit": {
+    "contract": "CacheCompatGetWeaponGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_weapon_name_hit": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_weapon_name_miss_1": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_weapon_name_miss_8000": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_chest_item_hit": {
+    "contract": "CacheCompatGetChestItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_chest_id_hit": {
+    "contract": "CacheCompatGetChestIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_chest_greatness_hit": {
+    "contract": "CacheCompatGetChestGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_chest_name_hit": {
+    "contract": "CacheCompatGetChestNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_head_item_hit": {
+    "contract": "CacheCompatGetHeadItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_head_id_hit": {
+    "contract": "CacheCompatGetHeadIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_head_greatness_hit": {
+    "contract": "CacheCompatGetHeadGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_head_name_hit": {
+    "contract": "CacheCompatGetHeadNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_waist_item_hit": {
+    "contract": "CacheCompatGetWaistItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_waist_id_hit": {
+    "contract": "CacheCompatGetWaistIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_waist_greatness_hit": {
+    "contract": "CacheCompatGetWaistGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_waist_name_hit": {
+    "contract": "CacheCompatGetWaistNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_foot_item_hit": {
+    "contract": "CacheCompatGetFootItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_foot_id_hit": {
+    "contract": "CacheCompatGetFootIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_foot_greatness_hit": {
+    "contract": "CacheCompatGetFootGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_foot_name_hit": {
+    "contract": "CacheCompatGetFootNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_hand_item_hit": {
+    "contract": "CacheCompatGetHandItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_hand_id_hit": {
+    "contract": "CacheCompatGetHandIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_hand_greatness_hit": {
+    "contract": "CacheCompatGetHandGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_hand_name_hit": {
+    "contract": "CacheCompatGetHandNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_neck_item_hit": {
+    "contract": "CacheCompatGetNeckItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_neck_id_hit": {
+    "contract": "CacheCompatGetNeckIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_neck_greatness_hit": {
+    "contract": "CacheCompatGetNeckGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_neck_name_hit": {
+    "contract": "CacheCompatGetNeckNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_ring_item_hit": {
+    "contract": "CacheCompatGetRingItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_ring_id_hit": {
+    "contract": "CacheCompatGetRingIdProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_ring_greatness_hit": {
+    "contract": "CacheCompatGetRingGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_ring_greatness_miss_1": {
+    "contract": "CacheCompatGetRingGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_ring_greatness_miss_8000": {
+    "contract": "CacheCompatGetRingGreatnessProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 1,
+    "events": 0
+  },
+  "get_ring_name_hit": {
+    "contract": "CacheCompatGetRingNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "reuse_packed_1": {
+    "contract": "CacheReusePackedProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "reuse_packed_8000": {
+    "contract": "CacheReusePackedProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "reuse_selected_1": {
+    "contract": "CacheReuseSelectedProbe",
+    "reads": 3,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "reuse_selected_8000": {
+    "contract": "CacheReuseSelectedProbe",
+    "reads": 3,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "reuse_expanded_1": {
+    "contract": "CacheReuseExpandedProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "reuse_expanded_8000": {
+    "contract": "CacheReuseExpandedProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_packed_bag_strict_miss": {
+    "contract": "CacheMissGetCachedPackedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_bag_strict_miss": {
+    "contract": "CacheMissGetCachedBagProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_item_strict_miss": {
+    "contract": "CacheMissGetCachedItemProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "get_cached_bag_names_strict_miss": {
+    "contract": "CacheMissGetCachedBagNamesProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "name_threshold_14": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "name_threshold_15": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "name_threshold_18": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "name_threshold_19": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "name_threshold_20": {
+    "contract": "CacheCompatGetWeaponNameProbe",
+    "reads": 1,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_item_weapon_id": {
+    "contract": "CacheScalarItemWeaponIdProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_direct_weapon_id": {
+    "contract": "CacheScalarDirectWeaponIdProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_item_weapon_greatness": {
+    "contract": "CacheScalarItemWeaponGreatnessProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_direct_weapon_greatness": {
+    "contract": "CacheScalarDirectWeaponGreatnessProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_item_foot_id": {
+    "contract": "CacheScalarItemFootIdProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_direct_foot_id": {
+    "contract": "CacheScalarDirectFootIdProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_item_foot_greatness": {
+    "contract": "CacheScalarItemFootGreatnessProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_direct_foot_greatness": {
+    "contract": "CacheScalarDirectFootGreatnessProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_item_ring_id": {
+    "contract": "CacheScalarItemRingIdProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_direct_ring_id": {
+    "contract": "CacheScalarDirectRingIdProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_item_ring_greatness": {
+    "contract": "CacheScalarItemRingGreatnessProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  },
+  "scalar_direct_ring_greatness": {
+    "contract": "CacheScalarDirectRingGreatnessProbe",
+    "reads": 0,
+    "writes": 0,
+    "keccak": 0,
+    "events": 0
+  }
+}

@@ -1,0 +1,114 @@
+name: Warm Review Caches
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Refresh Codex's latest release even when main has no new commits.
+    - cron: '23 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: warm-review-caches
+  cancel-in-progress: false
+
+jobs:
+  codex:
+    name: Warm Codex npm packages
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+
+      - name: Resolve Codex package version
+        id: codex-package
+        run: |
+          # Read the consumer's package spec so version changes stay in sync.
+          CODEX_NPM_SPEC=$(sed -nE 's/^[[:space:]]*CODEX_NPM_SPEC: "([^"]+)"[[:space:]]*$/\1/p' .github/workflows/codex-review.yml)
+          test -n "$CODEX_NPM_SPEC"
+          CODEX_VERSION=$(npm view "$CODEX_NPM_SPEC" version)
+          echo "version=$CODEX_VERSION" >> "$GITHUB_OUTPUT"
+          echo "cache-dir=$(npm config get cache)" >> "$GITHUB_OUTPUT"
+          echo "CODEX_NPM_SPEC=@openai/codex@$CODEX_VERSION" >> "$GITHUB_ENV"
+
+      # Keys and paths must match the corresponding PR restore step exactly.
+      # Check for an existing cache without downloading it into the warmer.
+      - name: Cache Codex npm packages
+        id: codex-cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ steps.codex-package.outputs.cache-dir }}/_cacache
+            ${{ steps.codex-package.outputs.cache-dir }}/_npx
+          key: codex-npm-v1-${{ runner.os }}-${{ runner.arch }}-node22-${{ steps.codex-package.outputs.version }}
+          lookup-only: true
+
+      - name: Download Codex packages
+        if: steps.codex-cache.outputs.cache-hit != 'true'
+        run: npx -y "$CODEX_NPM_SPEC" --version
+
+  claude:
+    name: Warm Claude action dependencies
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Cache Claude action dependencies
+        id: claude-cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.bun/install/cache
+          key: claude-bun-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/workflows/claude-review.yml') }}
+          lookup-only: true
+
+      - name: Read pinned Claude action revision
+        id: claude-action
+        if: steps.claude-cache.outputs.cache-hit != 'true'
+        run: |
+          CLAUDE_ACTION_REF=$(sed -nE 's|^[[:space:]]*uses: anthropics/claude-code-action@([0-9a-f]{40})([[:space:]].*)?$|\1|p' .github/workflows/claude-review.yml)
+          [[ "$CLAUDE_ACTION_REF" =~ ^[0-9a-f]{40}$ ]]
+          echo "ref=$CLAUDE_ACTION_REF" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout pinned Claude action
+        if: steps.claude-cache.outputs.cache-hit != 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: anthropics/claude-code-action
+          ref: ${{ steps.claude-action.outputs.ref }}
+          path: .cache-warm/claude-code-action
+          persist-credentials: false
+
+      - name: Read Claude action's Bun version
+        id: bun-version
+        if: steps.claude-cache.outputs.cache-hit != 'true'
+        run: |
+          BUN_VERSION=$(sed -nE 's/^[[:space:]]*bun-version: ([0-9]+\.[0-9]+\.[0-9]+)[[:space:]]*$/\1/p' .cache-warm/claude-code-action/action.yml)
+          [[ "$BUN_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          echo "version=$BUN_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Bun
+        if: steps.claude-cache.outputs.cache-hit != 'true'
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ steps.bun-version.outputs.version }}
+          no-cache: true
+
+      - name: Download Claude action dependencies
+        if: steps.claude-cache.outputs.cache-hit != 'true'
+        working-directory: .cache-warm/claude-code-action
+        run: bun install --production --frozen-lockfile

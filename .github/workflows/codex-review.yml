@@ -1,0 +1,165 @@
+name: Codex Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: codex-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    name: Codex Review
+    runs-on: ubuntu-latest
+    env:
+      CODEX_NPM_SPEC: "@openai/codex@latest"
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      # The secrets context is not available to `if`, and fork PRs get no
+      # secrets, so resolve availability here and gate the steps below on it.
+      - name: Check for review credentials
+        id: creds
+        env:
+          CODEX_AUTH_DOT_JSON: ${{ secrets.CODEX_AUTH_DOT_JSON }}
+        run: |
+          if [ -n "$CODEX_AUTH_DOT_JSON" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::CODEX_AUTH_DOT_JSON is not available; skipping review."
+          fi
+
+      - name: Setup Node.js
+        if: steps.creds.outputs.available == 'true'
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+
+      - name: Resolve Codex package version
+        id: codex-package
+        if: steps.creds.outputs.available == 'true'
+        run: |
+          # Resolve latest on every run so the cache follows new CLI releases.
+          CODEX_VERSION=$(npm view "$CODEX_NPM_SPEC" version)
+          echo "version=$CODEX_VERSION" >> "$GITHUB_OUTPUT"
+          echo "cache-dir=$(npm config get cache)" >> "$GITHUB_OUTPUT"
+          echo "CODEX_NPM_SPEC=@openai/codex@$CODEX_VERSION" >> "$GITHUB_ENV"
+
+      # Populated on main by warm-review-caches.yml and shared across PRs.
+      - name: Restore Codex npm packages
+        if: steps.creds.outputs.available == 'true'
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ steps.codex-package.outputs.cache-dir }}/_cacache
+            ${{ steps.codex-package.outputs.cache-dir }}/_npx
+          key: codex-npm-v1-${{ runner.os }}-${{ runner.arch }}-node22-${{ steps.codex-package.outputs.version }}
+
+      - name: Enable Codex sandbox prerequisites
+        if: steps.creds.outputs.available == 'true'
+        run: |
+          # Codex's Linux sandbox uses its bundled bubblewrap, which needs
+          # unprivileged user namespaces. Ubuntu 24.04 runner images block
+          # those via AppArmor, making every sandboxed command fail with:
+          #   bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted
+          # Same workaround as openai/codex-action uses on GitHub-hosted runners.
+          current_userns="$(sysctl -n kernel.unprivileged_userns_clone 2>/dev/null || true)"
+          if [ -n "$current_userns" ] && [ "$current_userns" != "1" ]; then
+            sudo sysctl -w kernel.unprivileged_userns_clone=1
+          fi
+          current_apparmor="$(sysctl -n kernel.apparmor_restrict_unprivileged_userns 2>/dev/null || true)"
+          if [ -n "$current_apparmor" ] && [ "$current_apparmor" != "0" ]; then
+            sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+          fi
+
+      - name: Inject OAuth session
+        if: steps.creds.outputs.available == 'true'
+        env:
+          CODEX_AUTH_DOT_JSON: ${{ secrets.CODEX_AUTH_DOT_JSON }}
+        run: |
+          mkdir -p ~/.codex
+          printf '%s' "$CODEX_AUTH_DOT_JSON" > ~/.codex/auth.json
+          chmod 600 ~/.codex/auth.json
+
+      - name: Build review prompt
+        if: steps.creds.outputs.available == 'true'
+        env:
+          PROMPT_FILE: .github/prompts/review.md
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPOSITORY: ${{ github.repository }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: ./.github/scripts/build-review-prompt.sh /tmp/prompt.txt
+
+      - name: Run Codex review
+        id: codex-review
+        if: steps.creds.outputs.available == 'true'
+        run: |
+          set +e
+          # read-only is deliberate: the review only needs git reads, and it
+          # keeps a prompt-injected review run from touching the workspace.
+          npx -y "$CODEX_NPM_SPEC" exec \
+            --sandbox read-only \
+            -c 'model="gpt-6-astra"' \
+            -c 'model_reasoning_effort="medium"' \
+            -o /tmp/review.txt \
+            -- "$(cat /tmp/prompt.txt)" > /tmp/review-run.log 2>&1
+          EXIT_CODE=$?
+          set -e
+
+          [ -s /tmp/review.txt ] && cat /tmp/review.txt
+          [ -s /tmp/review-run.log ] && sed -n '1,200p' /tmp/review-run.log
+
+          echo "exit_code=$EXIT_CODE" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Post review comment
+        # Not always(): a run cancelled by a newer push must not post a
+        # stale review or a failure stub.
+        if: ${{ !cancelled() && steps.creds.outputs.available == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          REVIEW_COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.event.pull_request.head.sha }}
+          REVIEW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/attempts/${{ github.run_attempt }}
+        run: |
+          {
+            echo "## Codex Review"
+            echo ""
+            if [ "${{ steps.codex-review.outputs.exit_code }}" != "0" ]; then
+              echo "**Review execution failed** (exit code ${{ steps.codex-review.outputs.exit_code }})."
+              echo ""
+              if [ -s /tmp/review-run.log ]; then
+                echo '```text'
+                sed -n '1,160p' /tmp/review-run.log
+                echo '```'
+              fi
+            elif [ -s /tmp/review.txt ]; then
+              cat /tmp/review.txt
+            else
+              echo "No review output was produced."
+            fi
+            echo ""
+            printf '\nReviewed commit [%s](%s) · [Workflow run](%s)\n' \
+              "$REVIEW_HEAD_SHA" "$REVIEW_COMMIT_URL" "$REVIEW_RUN_URL"
+            echo "<!-- codex-review -->"
+          } > /tmp/review-comment.txt
+
+          ./.github/scripts/post-pr-comment.sh \
+            "${{ github.repository }}" \
+            "${{ github.event.pull_request.number }}" \
+            /tmp/review-comment.txt
+
+      - name: Fail on Codex runtime error
+        if: steps.codex-review.outputs.exit_code != '' && steps.codex-review.outputs.exit_code != '0'
+        run: exit 1

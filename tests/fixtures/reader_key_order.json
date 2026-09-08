@@ -1,0 +1,14 @@
+{
+  "2": {
+    "weapon": {"item_name": 12, "greatness": 11},
+    "chest": {"item_name": 10, "greatness": 9}
+  },
+  "1": {
+    "weapon": {"item_name": 4, "greatness": 3},
+    "chest": {"item_name": 2, "greatness": 1}
+  },
+  "10": {
+    "weapon": {"item_name": 8, "greatness": 7},
+    "chest": {"item_name": 6, "greatness": 5}
+  }
+}

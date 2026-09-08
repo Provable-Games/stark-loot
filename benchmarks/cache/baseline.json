@@ -1,0 +1,28 @@
+{
+  "source_revision": "bdf965650341a4f90093a380f420b3685bc7a0de",
+  "scarb": "2.20.1",
+  "cairo": "2.20.0",
+  "sierra": "1.9.3",
+  "snforge": "0.63.0",
+  "casm_words": 20830,
+  "sierra_words": 8568,
+  "largest_segment": 1764,
+  "entrypoints": {
+    "EXTERNAL": 43,
+    "L1_HANDLER": 0,
+    "CONSTRUCTOR": 0
+  },
+  "sha256": {
+    "target/release/stark_loot_stark_loot.compiled_contract_class.json": "bf672af953181a89507aad7ce06ecf337cffe986fb7ec559d532318a003c622e",
+    "target/release/stark_loot_stark_loot.contract_class.json": "65612c92847d8bf68b9febb7e1ed06c99ad48f51443199e46e05d9f388db6c09",
+    "src/contract.cairo": "6fb637fb42d2234761f119f53339c1f5959b545f24af21c4189989aa5086bd47",
+    "src/lib.cairo": "0adea1550d828df2f1174eeed13de2258d78824120e5782f42e330b138886962",
+    "src/types.cairo": "ad41290b573834c35dc539ce9fc4db43bedff4f463771a649d5692e2fe265ae8",
+    "src/packed.cairo": "0ff8e91acc94f3374a1494ae8fe8463cc715491d4c177d84a655822b09dd519e",
+    "src/core.cairo": "1ddd7e4ab96adfef5851f38ac69f74088429c15a504f35e8a12ff87eea353b5a",
+    "src/constants.cairo": "d56b2f9d42bf1aa093e025c0e248171bdfdb5d4bdc04898f7488d6311a264dfc",
+    "src/item_id.cairo": "a9eed83fa651ba22b7a930ea92b5d0c5e914deb55f95b1eeb5d1986d8acd977f",
+    "Scarb.toml": "9f88bd53d7a2aae7fa128e5caa47250cab9219f41c523c9df79b700b87d51842",
+    "Scarb.lock": "c1a4e371adc2382fbd9383498f46e840f82452bfafa6d396a587a97bec2d84d6"
+  }
+}
